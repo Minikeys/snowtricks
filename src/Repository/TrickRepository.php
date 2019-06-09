@@ -53,8 +53,8 @@ class TrickRepository extends ServiceEntityRepository
     private function findVisibleQuery(): QueryBuilder
     {
         return $this->createQueryBuilder('t')
-            ->where('t.validate = :val')
-            ->setParameter('val', '2');
+            ->where('t.published = :val')
+            ->setParameter('val', '1');
     }
 
     // /**

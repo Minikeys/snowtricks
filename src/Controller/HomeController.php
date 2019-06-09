@@ -39,12 +39,12 @@ class HomeController extends AbstractController
     }
 
     /**
-     * @Route("/loadmore", name="loadmore", methods="POST")
-     * @param $offset
+     * @Route("/showmoretricks", name="showmoretricks", methods="POST")
+     * @param Request $req
      *
      * @return JsonResponse
      */
-    public function get_trick(Request $req): jsonresponse
+    public function showMoreTricks(Request $req): jsonresponse
     {
 
         $offset = $req->get('offset');
