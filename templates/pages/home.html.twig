@@ -29,7 +29,7 @@
                                     {% if is_granted('ROLE_USER') %}
                                         <div class="d-flex justify-content-end">
                                             <div class="btn-group">
-                                                <a href="{{ path('admin.trick.edit', {id: trick.id}) }}" class="btn btn-primary"><i class="fas fa-edit"></i></a>
+                                                <a href="" class="btn btn-primary"><i class="fas fa-edit"></i></a>
                                                 <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#modal-delete-trick" data-myvalue="trouducul" data-myvar="bisbis">
                                                     <i class="fas fa-trash-alt"></i>
                                                 </button>
@@ -41,8 +41,9 @@
                         </div>
                     {% endfor %}
                 </div>
-                <div class="d-flex justify-content-center" id="end"><button type="button" id="load-more" class="btn btn-primary">Load more</button></div>
-                <div class="d-flex justify-content-center" id="end"><button type="button" id="delete" class="btn btn-danger">Test delete</button></div>
+                {% if total_tricks.total > 5 %}
+                <div class="d-flex justify-content-center" id="end"><button type="button" id="load-more" class="btn btn-primary">Voir plus de tricks</button></div>
+                {% endif %}
             </div>
         </section>
         <button type="button" class="btn btn-secondary" id="scroll-top"><i class="fas fa-chevron-up"></i></button>
@@ -67,6 +68,5 @@
             </div>
         </div>
     </main>
-
 
 {% endblock %}
