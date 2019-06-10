@@ -7,7 +7,39 @@
 {% endblock %}
 
 {% block body %}
-    ..
+
+    <div class="container-trick">
+        <div class="row justify-content-center" style="border: solid 2px #ebebeb;">
+            <div class="col-15" id="trick">
+                <div class="landing-text">
+                    <h1 class="display-3">{{ trick.name }}</h1>
+                </div>
+            </div>
+        </div>
+        <div class="row-fluid">
+            <div class="row">
+                <div class="col">
+                    <img src="{{ asset('img/background_home.jpg') }}" class="card-img-top" alt="test">
+                </div>
+                <div class="col">
+                    <img src="{{ asset('img/background_home.jpg') }}" class="card-img-top" alt="test">
+                </div>
+                <div class="col">
+                    <img src="{{ asset('img/background_home.jpg') }}" class="card-img-top" alt="test">
+                </div>
+                <div class="col">
+                    <img src="{{ asset('img/background_home.jpg') }}" class="card-img-top" alt="test">
+                </div>
+                <div class="col">
+                    <img src="{{ asset('img/background_home.jpg') }}" class="card-img-top" alt="test">
+                </div>
+                <div class="col">
+                    <img src="{{ asset('img/background_home.jpg') }}" class="card-img-top" alt="test">
+                </div>
+            </div>
+        </div>
+    </div>
+
 {% endblock %}
 
 {% block javascripts %}

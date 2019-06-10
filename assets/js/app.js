@@ -19,6 +19,8 @@ $(document).ready(function(){
     var userRating = document.querySelector('#tricks');
     var pathloadmore = userRating.dataset.loadmore;
     var total_tricks = userRating.dataset.totaltricks;
+    var userRating = document.querySelector('.js-user-rating');
+    var isAuthenticated = userRating.dataset.isAuthenticated;
     var load_img = '<button class="btn btn-primary" type="button" id="load" disabled>\n' +
         '<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>\n' +
         'Chargement...\n' +
@@ -35,22 +37,10 @@ $(document).ready(function(){
                 $("#end").append(load_img);
             }
         }).done(function(data){
-            $.each(JSON.parse(data), function ( i, item) {
-                $('#tricks').append(
-                    `<div class="col-lg-3" id="${item.trick_id}">
-                            <div class="card">
-                                <img src="img/background_home.jpg" class="card-img-top" alt="test">
-                                <div class="card-body d-flex justify-content-between bd-highlight mb-3">
-                                    <div class="d-flex justify-content-start">
-                                        <h5 class="card-title">
-                                            <a href="${item.trick_url}"> ${item.trick_name}</a>
-                                        </h5>
-                                    </div>
-                                </div>
-                            </div>
-                    </div>`
-                );
-            });
+
+            let dddd = JSON.parse(data);
+            $('#tricks').append( dddd.html );
+
             offset = offset + 5;
 
             if (offset > total_tricks){
@@ -93,12 +83,12 @@ $(document).ready(function(){
     });
 
     $('#modal-delete-trick').on('show.bs.modal', function (event) {
-        var button = $(event.relatedTarget), // Button that triggered the modal
-            content = button.siblings('.read-more').html(),
-            modal = $(this);
-
-        modal.find('.modal-body').html(content);
-    });
+        var button = $(event.relatedTarget)
+        let action_url = button.data('actionurl')
+        let token = button.data('token')
+        $('#form_delete').attr('action', action_url);
+        $('#token').attr('value', token);
+    })
 
 
 });

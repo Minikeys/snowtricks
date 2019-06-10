@@ -15,11 +15,21 @@
         <section id="show-tricks">
             <div class="container-fluid">
                 <h1>Les tricks</h1>
+                {% for message in app.flashes ('success') %}
+                <div class="alert alert-success">
+                    {{ message }}
+                </div>
+                {% endfor %}
+                {% for message in app.flashes ('error') %}
+                    <div class="alert alert-danger">
+                        {{ message }}
+                    </div>
+                {% endfor %}
                 <div class="row flex" id="tricks" data-loadmore="{{ path('showmoretricks') }}" data-totaltricks="{{ total_tricks.total }}">
                     {% for trick in tricks %}
                         <div class="col-lg-3" id="{{ trick.id }}">
                             <div class="card">
-                                <img src="img/background_home.jpg" class="card-img-top" alt="test">
+                                <img src="{{ asset('img/background_home.jpg') }}" class="card-img-top" alt="test">
                                 <div class="card-body d-flex justify-content-between bd-highlight mb-3">
                                     <div class="d-flex justify-content-start">
                                         <h5 class="card-title">
@@ -30,7 +40,7 @@
                                         <div class="d-flex justify-content-end">
                                             <div class="btn-group">
                                                 <a href="" class="btn btn-primary"><i class="fas fa-edit"></i></a>
-                                                <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#modal-delete-trick" data-myvalue="trouducul" data-myvar="bisbis">
+                                                <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#modal-delete-trick" data-actionurl="{{ path('admin.trick.delete', {id: trick.id}) }}" data-token="{{ csrf_token('delete' ~ trick.id)}}">
                                                     <i class="fas fa-trash-alt"></i>
                                                 </button>
                                             </div>
@@ -46,6 +56,10 @@
                 {% endif %}
             </div>
         </section>
+        <div class="js-user-rating" data-is-authenticated="{{ app.user ? 'true' : 'false' }}">
+            <!-- ... -->
+        </div>
+        {% set twigVariable = '123456' %}
         <button type="button" class="btn btn-secondary" id="scroll-top"><i class="fas fa-chevron-up"></i></button>
 
         <div class="modal fade" id="modal-delete-trick" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
@@ -62,7 +76,11 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Annuler</button>
-
+                        <form method="post" action="" id="form_delete">
+                            <input type="hidden" name="_method" value="DELETE">
+                            <input type="hidden" name="_token" value="" id="token">
+                            <button class="btn btn-danger">Supprimer</button>
+                        </form>
                     </div>
                 </div>
             </div>

@@ -24,6 +24,20 @@ html, body {
     width: 100%;
     background-size: cover;
 }
+
+#trick {
+    background: url("/img/background_home.jpg") no-repeat 50% 50%;
+    display: table;
+    min-height: 50vh;
+    width: 100%;
+    background-size: cover;
+}
+
+.container-trick{
+    margin: 10vh 15% 0 15%;
+    background: #fafafa;
+}
+
 .landing-text {
     display: table-cell;
     vertical-align: middle;

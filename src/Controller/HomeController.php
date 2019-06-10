@@ -5,11 +5,14 @@ namespace App\Controller;
 
 
 use App\Repository\TrickRepository;
+use Symfony\Component\Form\Extension\Csrf\Type\FormTypeCsrfExtension;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\Security\Csrf\CsrfToken;
+use Symfony\Component\Security\Csrf\CsrfTokenManager;
 
 class HomeController extends AbstractController
 {
@@ -49,22 +52,13 @@ class HomeController extends AbstractController
 
         $offset = $req->get('offset');
         $tricks = $this->repository->findTricks($offset);
-        $response = array();
-        foreach ($tricks as $trick) {
-            $url = $this->generateUrl('trick.show', ['id' => $trick->getId(), 'slug' => $trick->getSlug()]);
-            $response[] = array(
-                'trick_id' => $trick->getId(),
-                'trick_name' => $trick->getName(),
-                'trick_slug' => $trick->getSlug(),
-                'trick_url' => $url,
-                // other fields
-            );
-        }
+        $response = array(
+            'html' => $this->renderView('pages/template.html.twig', array('tricks' => $tricks))
+        );
+
         return $this->json(
             json_encode($response)
         );
-
-
     }
 
 }
