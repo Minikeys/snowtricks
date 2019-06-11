@@ -10,7 +10,7 @@
 <main role="main">
     <div class="container-trick">
         <div class="row justify-content-center" style="border: solid 2px #ebebeb;">
-            <div class="col-15" id="trick">
+            <div class="col-15" id="trick" style="background: url({{ asset('img/') ~ trick.picture }}) no-repeat 50% 50%; background-size: cover;">
                 <div class="landing-text">
                     <h1 class="display-3">{{ trick.name }}</h1>
                 </div>
