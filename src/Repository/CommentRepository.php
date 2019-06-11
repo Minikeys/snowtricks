@@ -20,20 +20,24 @@ class CommentRepository extends ServiceEntityRepository
         parent::__construct($registry, Comment::class);
     }
 
-    public function findFirstTricks()
+    public function findFirstComments($id)
     {
         return $this->findVisibleQuery()
             ->orderBy('c.id', 'ASC')
+            ->where('c.trick = :val')
+            ->setParameter('val', $id)
             ->setMaxResults(5)
             ->getQuery()
             ->getResult()
             ;
     }
 
-    public function findTricks($offset)
+    public function findComments($offset, $id)
     {
         return $this->findVisibleQuery()
             ->orderBy('c.id', 'ASC')
+            ->where('c.trick = :val')
+            ->setParameter('val', $id)
             ->setMaxResults(5)
             ->setFirstResult($offset)
             ->getQuery()
@@ -41,12 +45,12 @@ class CommentRepository extends ServiceEntityRepository
             ;
     }
 
-    public function getTotalTricks($id)
+    public function getTotalComments($id)
     {
         return $this->findVisibleQuery()
             ->select('COUNT(c.id) AS total')
-            ->where('c.published = :val')
-            ->setParameter('val', '1')
+            ->where('c.trick = :val')
+            ->setParameter('val', $id)
             ->getQuery()
             ->getOneOrNullResult()
             ;

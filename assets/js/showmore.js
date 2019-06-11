@@ -3,10 +3,11 @@ require('bootstrap');
 
 $(document).ready(function(){
 
-    let offset = 5;
+    var offset = 5;
     let userRating = document.querySelector('#showmore');
     let pathloadmore = userRating.dataset.loadmore;
     let totalitem = userRating.dataset.totalitem;
+    let id = userRating.dataset.id;
     let load_img = '<button class="btn btn-primary" type="button" id="load" disabled>\n' +
         '<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>\n' +
         'Chargement...\n' +
@@ -16,7 +17,7 @@ $(document).ready(function(){
         $.ajax({
             url: pathloadmore,
             type: "POST",
-            data : {offset : offset},
+            data : {offset : offset, id : id},
             dataType: "json",
             beforeSend: function(){
                 $("#load-more").hide();
@@ -25,7 +26,7 @@ $(document).ready(function(){
         }).done(function(data){
 
             let render = JSON.parse(data);
-            $('#tricks').append( render.html );
+            $('#content').append( render.html );
 
             offset = offset + 5;
 
@@ -41,5 +42,15 @@ $(document).ready(function(){
             //do  something whether request is ok or fail
         });
     });
+
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+        if (offset >= 15 && (document.body.scrollTop > 30 || document.documentElement.scrollTop > 30)) {
+            document.getElementById("scroll-top").style.display = "block";
+        } else {
+            document.getElementById("scroll-top").style.display = "none";
+        }
+    }
 
 });

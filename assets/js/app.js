@@ -18,16 +18,6 @@ $(document).ready(function(){
         $('#18').remove();
     });
 
-    window.onscroll = function() {scrollFunction()};
-
-    function scrollFunction() {
-        if (offset >= 15 && (document.body.scrollTop > 30 || document.documentElement.scrollTop > 30)) {
-            document.getElementById("scroll-top").style.display = "block";
-        } else {
-            document.getElementById("scroll-top").style.display = "none";
-        }
-    }
-
     $('#scroll-top').click(function(){
         document.body.scrollTop = 0;
         document.documentElement.scrollTop = 0;

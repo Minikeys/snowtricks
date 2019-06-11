@@ -1,0 +1,6 @@
+{% for comment in comments %}
+    <li class="list-group-item">
+        <p class="mb-1">{{ comment.content }}</p>
+        <small>Auteur : {{ comment.author.name }}, ajouté le {{ comment.addedat|date("m/d/Y") }}</small>
+    </li>
+{% endfor %}

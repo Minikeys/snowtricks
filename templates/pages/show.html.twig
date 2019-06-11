@@ -77,51 +77,24 @@
                 <p class="text-center">Vous devez être connecté pour laisser un commentaire.</p>
             {% endif %}
             <hr>
-            <ul class="list-group w-50" style="margin: auto;">
-                <li class="list-group-item">
-                    <div class="d-flex w-100 justify-content-between">
-                        <h5 class="mb-1">List group item heading</h5>
-                        <small>3 days ago</small>
-                    </div>
-                    <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
-                    <small>Donec id elit non mi porta.</small>
-                </li>
-                <li class="list-group-item">
-                    <div class="d-flex w-100 justify-content-between">
-                        <h5 class="mb-1">List group item heading</h5>
-                        <small class="text-muted">3 days ago</small>
-                    </div>
-                    <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
-                    <small class="text-muted">Donec id elit non mi porta.</small>
-                </li>
-                <li class="list-group-item">
-                    <div class="d-flex w-100 justify-content-between">
-                        <h5 class="mb-1">List group item heading</h5>
-                        <small class="text-muted">3 days ago</small>
-                    </div>
-                    <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
-                    <small class="text-muted">Donec id elit non mi porta.</small>
-                </li>
-                <li class="list-group-item">
-                    <div class="d-flex w-100 justify-content-between">
-                        <h5 class="mb-1">List group item heading</h5>
-                        <small class="text-muted">3 days ago</small>
-                    </div>
-                    <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
-                    <small class="text-muted">Donec id elit non mi porta.</small>
-                </li>
-                <li class="list-group-item">
-                    <div class="d-flex w-100 justify-content-between">
-                        <h5 class="mb-1">List group item heading</h5>
-                        <small class="text-muted">3 days ago</small>
-                    </div>
-                    <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
-                    <small class="text-muted">Donec id elit non mi porta.</small>
-                </li>
+            {% if comments is empty %}
+                <p class="text-center">Aucun commentaire.</p>
+            {% else %}
+            <ul class="list-group w-50" style="margin: auto;" id="content">
+                {% for comment in comments %}
+                    <li class="list-group-item">
+                        <p class="mb-1">{{ comment.content }}</p>
+                        <small>Auteur : {{ comment.author.name }}, ajouté le {{ comment.addedat|date("m/d/Y") }}</small>
+                    </li>
+                {% endfor %}
             </ul>
+            {% endif %}
         </section>
     </div>
-    <div class="d-flex justify-content-center" id="showmore"  data-loadmore="{{ path('showmoretricks') }}" data-totalitem="{{ total_tricks.total }}" style="margin-top: 10px"><button type="button" id="load-more" class="btn btn-primary">Voir plus de tricks</button></div>
+    {% if total_comments.total > 5 %}
+    <div class="d-flex justify-content-center" id="showmore"  data-loadmore="{{ path('showmorecomments') }}" data-id="{{ trick.id }}" data-totalitem="{{ total_comments.total }}" style="margin-top: 10px"><button type="button" id="load-more" class="btn btn-primary">Voir plus de tricks</button></div>
+    {% endif %}
+    <button type="button" class="btn btn-secondary" id="scroll-top"><i class="fas fa-chevron-up"></i></button>
 </main>
 
 {% endblock %}

@@ -50,7 +50,7 @@ class HomeController extends AbstractController
         $offset = $req->get('offset');
         $tricks = $this->repository->findTricks($offset);
         $response = array(
-            'html' => $this->renderView('pages/template.html.twig', array('tricks' => $tricks))
+            'html' => $this->renderView('showmore/trick.html.twig', array('tricks' => $tricks))
         );
 
         return $this->json(
