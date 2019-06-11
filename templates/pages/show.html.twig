@@ -7,41 +7,126 @@
 {% endblock %}
 
 {% block body %}
-
+<main role="main">
     <div class="container-trick">
         <div class="row justify-content-center" style="border: solid 2px #ebebeb;">
             <div class="col-15" id="trick">
                 <div class="landing-text">
                     <h1 class="display-3">{{ trick.name }}</h1>
                 </div>
+                {% if is_granted('ROLE_USER') %}
+                    <div id="tools">
+                        <div class="btn-group" role="group">
+                            <button type="button" class="btn btn-primary" onclick="window.location.href='/page2'"><i class="far fa-edit"></i></button>
+                            <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#modal-delete-trick" data-actionurl="{{ path('admin.trick.delete', {id: trick.id}) }}" data-token="{{ csrf_token('delete' ~ trick.id)}}">
+                                <i class="fas fa-trash-alt"></i>
+                            </button>
+                        </div>
+                    </div>
+                {% endif %}
             </div>
         </div>
-        <div class="row-fluid">
-            <div class="row">
-                <div class="col">
-                    <img src="{{ asset('img/background_home.jpg') }}" class="card-img-top" alt="test">
-                </div>
-                <div class="col">
-                    <img src="{{ asset('img/background_home.jpg') }}" class="card-img-top" alt="test">
-                </div>
-                <div class="col">
-                    <img src="{{ asset('img/background_home.jpg') }}" class="card-img-top" alt="test">
-                </div>
-                <div class="col">
-                    <img src="{{ asset('img/background_home.jpg') }}" class="card-img-top" alt="test">
-                </div>
-                <div class="col">
-                    <img src="{{ asset('img/background_home.jpg') }}" class="card-img-top" alt="test">
-                </div>
-                <div class="col">
-                    <img src="{{ asset('img/background_home.jpg') }}" class="card-img-top" alt="test">
+        {% if trick.media is not empty %}
+        <section id="media" style="padding-top: 10px">
+            <div class="row-fluid">
+                <div class="row">
+                    <div class="col">
+                        <div class="responsive">
+                            {% for media in trick.media %}
+                            <div><img src="{{ asset('img/') ~ media.file }}" class="card-img-top" alt="test"></div>
+                            {% endfor %}
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
+        </section>
+        {% endif %}
+        <section id="flashes" style="padding-top: 10px">
+            {% for message in app.flashes ('success') %}
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                    {{ message }}
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            {% endfor %}
+            {% for message in app.flashes ('error') %}
+                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                    {{ message }}
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            {% endfor %}
+        </section>
+        <section id="details" style="padding-top: 10px">
+            <div class="row-fluid">
+                <div class="col">
+                    <p class="text-justify">{{ trick.description }}</p>
+                </div>
+                <div class="col">
+                    <p style="text-align: center">Créer le {{ trick.createdat|date("m/d/Y") }} | Catégorie {{ trick.category.name }} | Mis à jour le {{ trick.updateat|date("m/d/Y") }}</p>
+                </div>
+            </div>
+        </section>
+        <section id="comment">
+            <hr>
+            {% if is_granted('ROLE_USER') %}
+                <p>FORM</p>
+            {% else %}
+                <p class="text-center">Vous devez être connecté pour laisser un commentaire.</p>
+            {% endif %}
+            <hr>
+            <ul class="list-group w-50" style="margin: auto;">
+                <li class="list-group-item">
+                    <div class="d-flex w-100 justify-content-between">
+                        <h5 class="mb-1">List group item heading</h5>
+                        <small>3 days ago</small>
+                    </div>
+                    <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+                    <small>Donec id elit non mi porta.</small>
+                </li>
+                <li class="list-group-item">
+                    <div class="d-flex w-100 justify-content-between">
+                        <h5 class="mb-1">List group item heading</h5>
+                        <small class="text-muted">3 days ago</small>
+                    </div>
+                    <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+                    <small class="text-muted">Donec id elit non mi porta.</small>
+                </li>
+                <li class="list-group-item">
+                    <div class="d-flex w-100 justify-content-between">
+                        <h5 class="mb-1">List group item heading</h5>
+                        <small class="text-muted">3 days ago</small>
+                    </div>
+                    <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+                    <small class="text-muted">Donec id elit non mi porta.</small>
+                </li>
+                <li class="list-group-item">
+                    <div class="d-flex w-100 justify-content-between">
+                        <h5 class="mb-1">List group item heading</h5>
+                        <small class="text-muted">3 days ago</small>
+                    </div>
+                    <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+                    <small class="text-muted">Donec id elit non mi porta.</small>
+                </li>
+                <li class="list-group-item">
+                    <div class="d-flex w-100 justify-content-between">
+                        <h5 class="mb-1">List group item heading</h5>
+                        <small class="text-muted">3 days ago</small>
+                    </div>
+                    <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+                    <small class="text-muted">Donec id elit non mi porta.</small>
+                </li>
+            </ul>
+        </section>
     </div>
+    <div class="d-flex justify-content-center" id="showmore"  data-loadmore="{{ path('showmoretricks') }}" data-totalitem="{{ total_tricks.total }}" style="margin-top: 10px"><button type="button" id="load-more" class="btn btn-primary">Voir plus de tricks</button></div>
+</main>
 
 {% endblock %}
 
 {% block javascripts %}
-
+    {{ encore_entry_script_tags('js/slide') }}
+    {{ encore_entry_script_tags('js/showmore') }}
 {% endblock %}

@@ -19,6 +19,8 @@
         "build": "encore production --progress"
     },
     "dependencies": {
-        "popper.js": "^1.15.0"
+        "owl.carousel": "^2.3.4",
+        "popper.js": "^1.15.0",
+        "slick-carousel": "^1.8.1"
     }
 }

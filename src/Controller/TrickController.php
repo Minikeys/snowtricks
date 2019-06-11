@@ -5,6 +5,7 @@ namespace App\Controller;
 
 
 use App\Entity\Trick;
+use App\Repository\CommentRepository;
 use App\Repository\TrickRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
@@ -15,11 +16,16 @@ class TrickController extends AbstractController
     /**
      * @var TrickRepository
      */
-    private $repository;
+    private $trickRepository;
+    /**
+     * @var CommentRepository
+     */
+    private $commentRepository;
 
-    public function __construct(TrickRepository $repository)
+    public function __construct(TrickRepository $trickRepository, CommentRepository $commentRepository)
     {
-        $this->repository = $repository;
+        $this->trickRepository = $trickRepository;
+        $this->commentRepository = $commentRepository;
     }
 
     /**
@@ -39,9 +45,15 @@ class TrickController extends AbstractController
             ], 301);
 
         }
+        $id = $trick->getId();
+        $comments = $this->commentRepository->findFirstComments($id);
+        $total_comments= $this->commentRepository->getTotalComments($id);
         return $this->render('pages/show.html.twig', [
             'trick' => $trick,
-            'current_menu' => 'home'
+            'current_menu' => 'home',
+            'total_comments' => $total_comments,
+            'comments' => $comments,
+
         ]);
     }
 

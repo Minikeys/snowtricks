@@ -1,7 +1,11 @@
 {% for trick in tricks %}
     <div class="col-lg-3" id="{{ trick.id }}">
         <div class="card">
-            <img src="{{ asset('img/background_home.jpg') }}" class="card-img-top" alt="test">
+            {% if trick.picture is null %}
+                <img src="{{ asset('img/background_home.jpg') }}" class="card-img-top" alt="{{ trick.name }}">
+            {% else %}
+                <img src="{{ asset('img/' ~ trick.picture  ) }}" class="card-img-top" alt="{{ trick.name }}">
+            {% endif %}
             <div class="card-body d-flex justify-content-between bd-highlight mb-3">
                 <div class="d-flex justify-content-start">
                     <h5 class="card-title">

@@ -16,20 +16,30 @@
             <div class="container-fluid">
                 <h1>Les tricks</h1>
                 {% for message in app.flashes ('success') %}
-                <div class="alert alert-success">
-                    {{ message }}
-                </div>
-                {% endfor %}
-                {% for message in app.flashes ('error') %}
-                    <div class="alert alert-danger">
+                    <div class="alert alert-success alert-dismissible fade show" role="alert">
                         {{ message }}
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
                     </div>
                 {% endfor %}
-                <div class="row flex" id="tricks" data-loadmore="{{ path('showmoretricks') }}" data-totaltricks="{{ total_tricks.total }}">
+                {% for message in app.flashes ('error') %}
+                    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                        {{ message }}
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                {% endfor %}
+                <div class="row flex" id="tricks" style="margin-right: 20px; margin-left: 20px">
                     {% for trick in tricks %}
                         <div class="col-lg-3" id="{{ trick.id }}">
                             <div class="card">
-                                <img src="{{ asset('img/background_home.jpg') }}" class="card-img-top" alt="test">
+                                {% if trick.picture is null %}
+                                    <img src="{{ asset('img/background_home.jpg') }}" class="card-img-top" alt="{{ trick.name }}">
+                                {% else %}
+                                    <img src="{{ asset('img/' ~ trick.picture  ) }}" class="card-img-top" alt="{{ trick.name }}">
+                                {% endif %}
                                 <div class="card-body d-flex justify-content-between bd-highlight mb-3">
                                     <div class="d-flex justify-content-start">
                                         <h5 class="card-title">
@@ -52,39 +62,16 @@
                     {% endfor %}
                 </div>
                 {% if total_tricks.total > 5 %}
-                <div class="d-flex justify-content-center" id="end"><button type="button" id="load-more" class="btn btn-primary">Voir plus de tricks</button></div>
+                <div class="d-flex justify-content-center" id="showmore"  data-loadmore="{{ path('showmoretricks') }}" data-totalitem="{{ total_tricks.total }}" ><button type="button" id="load-more" class="btn btn-primary">Voir plus de tricks</button></div>
                 {% endif %}
             </div>
         </section>
-        <div class="js-user-rating" data-is-authenticated="{{ app.user ? 'true' : 'false' }}">
-            <!-- ... -->
-        </div>
-        {% set twigVariable = '123456' %}
         <button type="button" class="btn btn-secondary" id="scroll-top"><i class="fas fa-chevron-up"></i></button>
 
-        <div class="modal fade" id="modal-delete-trick" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLongTitle">Supprimer</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        Tu es sur de vouloir faire cela?
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Annuler</button>
-                        <form method="post" action="" id="form_delete">
-                            <input type="hidden" name="_method" value="DELETE">
-                            <input type="hidden" name="_token" value="" id="token">
-                            <button class="btn btn-danger">Supprimer</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
     </main>
 
+{% endblock %}
+
+{% block javascripts %}
+    {{ encore_entry_script_tags('js/showmore') }}
 {% endblock %}

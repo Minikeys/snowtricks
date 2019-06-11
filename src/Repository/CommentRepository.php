@@ -4,6 +4,7 @@ namespace App\Repository;
 
 use App\Entity\Comment;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
+use Doctrine\ORM\QueryBuilder;
 use Symfony\Bridge\Doctrine\RegistryInterface;
 
 /**
@@ -19,6 +20,44 @@ class CommentRepository extends ServiceEntityRepository
         parent::__construct($registry, Comment::class);
     }
 
+    public function findFirstTricks()
+    {
+        return $this->findVisibleQuery()
+            ->orderBy('c.id', 'ASC')
+            ->setMaxResults(5)
+            ->getQuery()
+            ->getResult()
+            ;
+    }
+
+    public function findTricks($offset)
+    {
+        return $this->findVisibleQuery()
+            ->orderBy('c.id', 'ASC')
+            ->setMaxResults(5)
+            ->setFirstResult($offset)
+            ->getQuery()
+            ->getResult()
+            ;
+    }
+
+    public function getTotalTricks($id)
+    {
+        return $this->findVisibleQuery()
+            ->select('COUNT(c.id) AS total')
+            ->where('c.published = :val')
+            ->setParameter('val', '1')
+            ->getQuery()
+            ->getOneOrNullResult()
+            ;
+    }
+
+    private function findVisibleQuery(): QueryBuilder
+    {
+        return $this->createQueryBuilder('c')
+            ->where('c.published = :val')
+            ->setParameter('val', '1');
+    }
     // /**
     //  * @return Comment[] Returns an array of Comment objects
     //  */
