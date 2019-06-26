@@ -24,12 +24,11 @@ $(document).ready(function(){
     });
 
     $('#modal-delete-trick').on('show.bs.modal', function (event) {
-        var button = $(event.relatedTarget)
-        let action_url = button.data('actionurl')
-        let token = button.data('token')
+        let button = $(event.relatedTarget);
+        let action_url = button.data('actionurl');
+        let token = button.data('token');
         $('#form_delete').attr('action', action_url);
         $('#token').attr('value', token);
     });
-
 
 });

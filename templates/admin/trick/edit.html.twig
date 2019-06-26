@@ -1,0 +1,118 @@
+{% extends 'base.html.twig' %}
+
+{% block title trick.name %}
+
+{% block stylesheets %}
+
+{% endblock %}
+
+{% block body %}
+<main role="main">
+    <div class="container-trick">
+            <div class="row-justify">
+                {% if trick.picture is null %}
+                    <div class="col" id="trick" style="background: url({{ asset('img/background_home.jpg') }}) no-repeat 50% 50%; background-size: cover;">
+                {% else %}
+                    <div class="col" id="trick" style="background: url({{ asset('img/') ~ trick.picture }}) no-repeat 50% 50%; background-size: cover;">
+                {% endif %}
+                    <div class="landing-text">
+                        <h1 class="display-3">{{ trick.name }}</h1>
+                    </div>
+                        <div id="tools">
+                            <div class="btn-group" role="group">
+                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-edit-media" data-title="Edit Main Picture" data-idtrick="{{ trick.id }}" data-pathupdate="{{ path('admin.trick.edit.picture', {id: trick.id}) }}">
+                                    <i class="fas fa-edit"></i>
+                                </button>
+                                <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#modal-edit-media" data-title="Delete Main Picture" data-idtrick="{{ trick.id }}">
+                                    <i class="fas fa-trash-alt"></i>
+                                </button>
+                            </div>
+                        </div>
+            </div>
+        {% if trick.media is not empty %}
+        <section id="media" style="padding-top: 10px">
+            <div class="row-fluid">
+                <div class="row">
+                    <div class="col">
+                        <div class="responsive">
+                            {% for media in trick.media %}
+                            <div>
+                                <img src="{{ asset('img/') ~ media.file }}" class="card-img-top" alt="test">
+                                <div>
+                                    <div class="btn-group" role="group">
+                                        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#modal-edit-media" data-title="Delete Media {{ media.file }}">
+                                            <i class="fas fa-trash-alt"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        {% endif %}
+        <section id="flashes" style="padding-top: 10px">
+            {% for message in app.flashes ('success') %}
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                    {{ message }}
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            {% endfor %}
+            {% for message in app.flashes ('error') %}
+                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                    {{ message }}
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            {% endfor %}
+        </section>
+        <section id="details" style="padding-top: 10px">
+            <div class="row-fluid">
+                <div class="col">
+                    {{ form_start(form) }}
+                    {{ form_row(form.name) }}
+                    {{ form_row(form.description) }}
+                    {{ form_row(form.category) }}
+                    <div class="d-flex justify-content-end">
+                        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#modal-delete-trick" data-actionurl="{{ path('admin.trick.delete', {id: trick.id}) }}" data-token="{{ csrf_token('delete' ~ trick.id)}}">
+                            Supprimer
+                        </button>
+                        <button class="btn btn-primary">Editer</button>
+                    </div>
+                    {{ form_end(form) }}
+                </div>
+            </div>
+        </section>
+
+        <div class="modal fade" id="modal-edit-media" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                        <div class="modal-body">
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Annuler</button>
+                            <button type="button" id="sendpicture" class="btn btn-primary">Send message</button>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+{% endblock %}
+
+{% block javascripts %}
+    {{ encore_entry_script_tags('js/slide') }}
+    {{ encore_entry_script_tags('js/editpicture') }}
+{% endblock %}

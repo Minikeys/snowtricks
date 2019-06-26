@@ -3,13 +3,25 @@
 {% block title %}Register{% endblock %}
 
 {% block body %}
-    <h1>Register</h1>
+<main role="main">
+    <div class="container-fluid" style="padding-top: 60px">
+        <div class="row justify-content-center" style="min-height: 80vh">
+            <div class="col-xl-8 col-lg-6 col-sm-8" style="text-align: center">
+                <h1>Créer un compte</h1>
+                <div class="card">
+                    <div class="card-body">
 
-    {{ form_start(registrationForm) }}
-        {{ form_row(registrationForm.email) }}
-        {{ form_row(registrationForm.name) }}
-        {{ form_row(registrationForm.plainPassword) }}
+                        {{ form_start(registrationForm) }}
+                        {{ form_row(registrationForm.name) }}
+                        {{ form_row(registrationForm.email) }}
+                        {{ form_row(registrationForm.plainPassword) }}
 
-        <button class="btn">Register</button>
-    {{ form_end(registrationForm) }}
+                        <button class="btn btn-primary">S'enregistrer</button>
+                        {{ form_end(registrationForm) }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
 {% endblock %}

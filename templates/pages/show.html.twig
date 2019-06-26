@@ -8,16 +8,21 @@
 
 {% block body %}
 <main role="main">
+    <section id="media" style="padding-top: 10px">
     <div class="container-trick">
-        <div class="row justify-content-center" style="border: solid 2px #ebebeb;">
-            <div class="col-15" id="trick" style="background: url({{ asset('img/') ~ trick.picture }}) no-repeat 50% 50%; background-size: cover;">
+        <div class="row-justify">
+            {% if trick.picture is null %}
+                <div class="col" id="trick" style="background: url({{ asset('img/background_home.jpg') }}) no-repeat 50% 50%; background-size: cover;">
+            {% else %}
+                <div class="col" id="trick" style="background: url({{ asset('img/') ~ trick.picture }}) no-repeat 50% 50%; background-size: cover;">
+            {% endif %}
                 <div class="landing-text">
                     <h1 class="display-3">{{ trick.name }}</h1>
                 </div>
                 {% if is_granted('ROLE_USER') %}
                     <div id="tools">
                         <div class="btn-group" role="group">
-                            <button type="button" class="btn btn-primary" onclick="window.location.href='/page2'"><i class="far fa-edit"></i></button>
+                            <button type="button" class="btn btn-primary" onclick="window.location.href='{{ path('admin.trick.edit', {id: trick.id}) }}'"><i class="far fa-edit"></i></button>
                             <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#modal-delete-trick" data-actionurl="{{ path('admin.trick.delete', {id: trick.id}) }}" data-token="{{ csrf_token('delete' ~ trick.id)}}">
                                 <i class="fas fa-trash-alt"></i>
                             </button>
@@ -90,11 +95,13 @@
             </ul>
             {% endif %}
         </section>
+        {% if total_comments.total > 5 %}
+            <div class="d-flex justify-content-center" id="showmore"  data-loadmore="{{ path('showmorecomments') }}" data-id="{{ trick.id }}" data-totalitem="{{ total_comments.total }}" style="margin-top: 10px; margin-bottom: 20px"><button type="button" id="load-more" class="btn btn-primary">Voir plus de commentaires</button></div>
+        {% endif %}
     </div>
-    {% if total_comments.total > 5 %}
-    <div class="d-flex justify-content-center" id="showmore"  data-loadmore="{{ path('showmorecomments') }}" data-id="{{ trick.id }}" data-totalitem="{{ total_comments.total }}" style="margin-top: 10px"><button type="button" id="load-more" class="btn btn-primary">Voir plus de tricks</button></div>
-    {% endif %}
+
     <button type="button" class="btn btn-secondary" id="scroll-top"><i class="fas fa-chevron-up"></i></button>
+    </section>
 </main>
 
 {% endblock %}

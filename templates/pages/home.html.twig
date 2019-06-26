@@ -12,7 +12,7 @@
             </div>
             <div id="scroll-down"><a class="btn btn-secondary" href="#show-tricks"><i class="fas fa-lg fa-chevron-down"></i></a></div>
         </div>
-        <section id="show-tricks">
+        <section id="show-tricks" style="padding-top: 10px">
             <div class="container-fluid">
                 <h1>Les tricks</h1>
                 {% for message in app.flashes ('success') %}
@@ -49,7 +49,7 @@
                                     {% if is_granted('ROLE_USER') %}
                                         <div class="d-flex justify-content-end">
                                             <div class="btn-group">
-                                                <a href="" class="btn btn-primary"><i class="fas fa-edit"></i></a>
+                                                <a href="{{ path('admin.trick.edit', {id: trick.id}) }}" class="btn btn-primary"><i class="fas fa-edit"></i></a>
                                                 <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#modal-delete-trick" data-actionurl="{{ path('admin.trick.delete', {id: trick.id}) }}" data-token="{{ csrf_token('delete' ~ trick.id)}}">
                                                     <i class="fas fa-trash-alt"></i>
                                                 </button>

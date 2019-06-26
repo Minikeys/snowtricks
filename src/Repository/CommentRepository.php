@@ -32,6 +32,8 @@ class CommentRepository extends ServiceEntityRepository
             ;
     }
 
+
+
     public function findComments($offset, $id)
     {
         return $this->findVisibleQuery()

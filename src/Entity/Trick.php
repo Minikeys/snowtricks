@@ -42,7 +42,8 @@ class Trick
      * @ORM\Column(type="string", length=255, nullable=true)
      * @Assert\Image(
      *     mimeTypes={"image/jpeg", "image/png"},
-     *     mimeTypesMessage="Only jpg, jpeg or png pictures"
+     *     mimeTypesMessage="Only jpg, jpeg or png pictures",
+     *     groups = {"create"}
      * )
      */
     private $picture;
