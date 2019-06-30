@@ -20,10 +20,10 @@
                     </div>
                         <div id="tools">
                             <div class="btn-group" role="group">
-                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-edit-media" data-picture="{{ asset(dir_media) ~ trick.picture }}" data-pathupdate="{{ path('admin.trick.edit.picture', {id: trick.id}) }}">
+                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-edit-media" data-path="{{ path('admin.trick.edit.picture', {id: trick.id}) }}">
                                     <i class="fas fa-edit"></i>
                                 </button>
-                                <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#modal-edit-media" data-title="Delete Main Picture" data-idtrick="{{ trick.id }}">
+                                <button id="btndeletepicture" type="button" class="btn btn-danger"  {% if trick.picture is null %}style="display: none"{% endif %} data-toggle="modal" data-target="#modal-edit-media" data-path="{{ path('admin.trick.delete.picture', {id: trick.id}) }}">
                                     <i class="fas fa-trash-alt"></i>
                                 </button>
                             </div>
