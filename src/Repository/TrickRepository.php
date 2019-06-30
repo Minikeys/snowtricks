@@ -57,6 +57,16 @@ class TrickRepository extends ServiceEntityRepository
             ->setParameter('val', '1');
     }
 
+    public function getCurrentPicture($id)
+    {
+        return $this->createQueryBuilder('t')
+            ->select('t.picture')
+            ->where('t.id = :val')
+            ->setParameter('val', $id)
+            ->getQuery()
+            ->getOneOrNullResult();
+    }
+
     // /**
     //  * @return Trick[] Returns an array of Trick objects
     //  */

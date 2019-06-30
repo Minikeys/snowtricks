@@ -1,11 +1,19 @@
+<div class="modal-header">
+    <h5 class="modal-title" id="exampleModalLabel">Editer l'image principale</h5>
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
 {{ form_start(form) }}
-	{{ form_widget(form) }}
-<div class="form-group row">
-    <div class="col-sm-2"></div>
-    <div class="col-sm-10">
-        <button type="submit" class="btn btn-primary" data-label="Enregistrer">
-            Enregistrer
-        </button>
+<div class="modal-body">
+    <div id="error">
     </div>
+    {{ form_widget(form) }}
+    <input id="oldpicture" name="oldpicture" type="hidden" value="test">
+</div>
+<div class="modal-footer">
+    <button type="submit" class="btn btn-primary" data-label="Enregistrer">
+        Enregistrer
+    </button>
 </div>
 {{ form_end(form) }}

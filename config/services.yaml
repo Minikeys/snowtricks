@@ -6,7 +6,8 @@
 parameters:
     locale: 'fr'
     app_name: 'SnowTricks'
-    media_directory: '%kernel.project_dir%/public/uploads/media'
+    media_directory: '%kernel.project_dir%/public/uploads/media/'
+    dir_media: '/uploads/media/'
 
 services:
     # default configuration for services in *this* file

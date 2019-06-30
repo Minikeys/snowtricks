@@ -21,11 +21,6 @@ class EditTrickType extends AbstractType
                 'class' => Category::class,
                 'choice_label' => 'name', ])
             ->add('published')
-            ->add('picture', FileType::class,
-                array(
-                    'data_class' => null,
-                    'required'   => false
-                ))
         ;
     }
 

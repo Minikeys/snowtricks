@@ -38,7 +38,7 @@
                                 {% if trick.picture is null %}
                                     <img src="{{ asset('img/background_home.jpg') }}" class="card-img-top" alt="{{ trick.name }}">
                                 {% else %}
-                                    <img src="{{ asset('img/' ~ trick.picture  ) }}" class="card-img-top" alt="{{ trick.name }}">
+                                    <img src="{{ asset(dir_media) ~ trick.picture }}" class="card-img-top" alt="{{ trick.name }}">
                                 {% endif %}
                                 <div class="card-body d-flex justify-content-between bd-highlight mb-3">
                                     <div class="d-flex justify-content-start">

@@ -9,6 +9,8 @@ use App\Form\EditPictureTrickType;
 use App\Form\EditTrickType;
 use App\Form\NewTrickType;
 use App\Repository\TrickRepository;
+use Symfony\Component\HttpFoundation\File\Exception\FileException;
+use Symfony\Component\HttpFoundation\File\UploadedFile;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Doctrine\Common\Persistence\ObjectManager;
 use Symfony\Component\HttpFoundation\JsonResponse;
@@ -96,30 +98,66 @@ class AdminTrickController extends AbstractController
     public function editPicture(Trick $trick, Request $request)
     {
 
-        $form = $this->createForm(EditPictureTrickType::class, $trick);
+        $id = $request->attributes->get('id');
+        $form = $this->createForm(EditPictureTrickType::class, $trick, [
+            'action' => $this->generateUrl('admin.trick.edit.picture', array('id' => $id)),
+            'method' => 'POST',
+        ]);
         $form->handleRequest($request);
 
-        if($form->isSubmitted() && $form->isValid()){
-          //  $this->em->flush();
-         //   $this->addFlash('success', 'Trick edit success');
-            $response = array(
-                'success' => 'Upload ok',
-            );
+        if($form->isSubmitted()){
 
-            return $this->json(
-                json_encode($response)
-            );
+            if($form->isValid()){
+                $oldpicture = $this->repository->getCurrentPicture($id);
+                $dir = $this->getParameter('media_directory');
+
+
+                $picturefile = $form['picture']->getData();
+
+                if($picturefile){
+                    $newFilename = uniqid().'.'.$picturefile->getClientOriginalExtension();
+
+                    try {
+                        $picturefile->move(
+                            $this->getParameter('media_directory'),
+                            $newFilename
+                        );
+                    } catch (FileException $e) {
+                        // ... handle exception if something happens during file upload
+                    }
+
+                    $trick->setPicture($newFilename);
+
+                    $newpicture = $this->getParameter('dir_media').$newFilename;
+
+                    $this->em->flush();
+
+                    if(!is_null($oldpicture['picture'])){
+                        unlink($dir.$oldpicture['picture']);
+                    }
+
+                    $response = ['newpicture' => $newpicture,
+                        'message' => 'success'];
+
+                    return new JsonResponse(json_encode($response));
+                }
+            }else{
+                $errors = array();
+                foreach ($form->getErrors(true) as $error) {
+                    $errors[] = $error->getMessage();
+                };
+                $response = ['error' => $errors,
+                    'message' => 'error'];
+
+                return new JsonResponse(json_encode($response));
+
+            }
         }
 
         return $this->render('form/updatepicture.html.twig', [
             'form' => $form->createView(),
         ]);
 
-}
-
-    private function generateUniqueFileName()
-    {
-        return md5(uniqid());
     }
 
 }
