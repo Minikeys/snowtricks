@@ -8,7 +8,7 @@
 
 {% block body %}
 <main role="main">
-    <section id="media" style="padding-top: 10px">
+    <section id="media">
     <div class="container-trick">
         <div class="row-justify">
             {% if trick.picture is null %}
@@ -32,7 +32,7 @@
             </div>
         </div>
         {% if trick.media is not empty %}
-        <section id="media" style="padding-top: 10px">
+        <section id="media">
             <div class="row-fluid">
                 <div class="row">
                     <div class="col">
@@ -58,7 +58,7 @@
             </div>
         </section>
         {% endif %}
-        <section id="flashes" style="padding-top: 10px">
+        <section id="flashes">
             {% for message in app.flashes ('success') %}
                 <div class="alert alert-success alert-dismissible fade show" role="alert">
                     {{ message }}
@@ -76,7 +76,7 @@
                 </div>
             {% endfor %}
         </section>
-        <section id="details" style="padding-top: 10px">
+        <section id="details">
             <div class="row-fluid">
                 <div class="col">
                     <p class="text-justify">{{ trick.description }}</p>
@@ -86,7 +86,7 @@
                 </div>
             </div>
         </section>
-        <section id="comment" style="padding-top: 10px; padding-bottom: 10px">
+        <section id="comment">
             {% if is_granted('ROLE_USER') %}
                 {{ form_start(formcomment) }}
             <div class="row justify-content-center">

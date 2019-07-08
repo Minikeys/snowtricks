@@ -7,6 +7,8 @@ use App\Entity\Trick;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\FileType;
+use Symfony\Component\Form\Extension\Core\Type\TextareaType;
+use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
@@ -15,12 +17,12 @@ class EditTrickType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('name')
-            ->add('description')
+            ->add('name',TextType::class, ['label' => 'Nom'])
+            ->add('description',TextareaType::class, ['label' => 'Description'])
             ->add('category', EntityType::class, [
                 'class' => Category::class,
-                'choice_label' => 'name', ])
-            ->add('published')
+                'choice_label' => 'name',
+                'label' => 'Catégorie'])
         ;
     }
 

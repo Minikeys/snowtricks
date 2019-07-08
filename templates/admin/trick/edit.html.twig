@@ -29,7 +29,7 @@
                             </div>
                         </div>
             </div>
-        <section id="media" style="padding-top: 10px">
+        <section id="media">
             <div class="row-fluid">
                 <div class="row">
                     <div class="col">
@@ -57,7 +57,7 @@
                 </div>
             </div>
         </section>
-        <section id="flashes" style="padding-top: 10px">
+        <section id="flashes">
             {% for message in app.flashes ('success') %}
                 <div class="alert alert-success alert-dismissible fade show" role="alert">
                     {{ message }}
@@ -75,7 +75,7 @@
                 </div>
             {% endfor %}
         </section>
-        <section id="details" style="padding-top: 10px">
+        <section id="details">
             <div class="row-fluid">
                 <div class="col">
                     {{ form_start(form) }}

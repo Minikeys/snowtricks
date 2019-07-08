@@ -2,58 +2,69 @@
   "entrypoints": {
     "js/app": {
       "js": [
-        "/build/runtime.26bd8744.js",
-        "/build/0.2375624d.js",
-        "/build/1.76893ba2.js",
-        "/build/js/app.55ae66c4.js"
+        "http://localhost:8080/build/runtime.js",
+        "http://localhost:8080/build/vendors~css/app~js/addcomment~js/app~js/editpicture~js/previewmedia~js/showmore~js/slide.js",
+        "http://localhost:8080/build/vendors~js/addcomment~js/app~js/editpicture~js/previewmedia~js/showmore~js/slide.js",
+        "http://localhost:8080/build/vendors~js/addcomment~js/app~js/editpicture~js/previewmedia~js/showmore.js",
+        "http://localhost:8080/build/vendors~js/app~js/slide.js",
+        "http://localhost:8080/build/js/app.js"
       ]
     },
     "js/slide": {
       "js": [
-        "/build/runtime.26bd8744.js",
-        "/build/0.2375624d.js",
-        "/build/2.dbecf8cb.js",
-        "/build/js/slide.a4922779.js"
+        "http://localhost:8080/build/runtime.js",
+        "http://localhost:8080/build/vendors~css/app~js/addcomment~js/app~js/editpicture~js/previewmedia~js/showmore~js/slide.js",
+        "http://localhost:8080/build/vendors~js/addcomment~js/app~js/editpicture~js/previewmedia~js/showmore~js/slide.js",
+        "http://localhost:8080/build/vendors~js/app~js/slide.js",
+        "http://localhost:8080/build/js/slide.js"
       ]
     },
     "js/showmore": {
       "js": [
-        "/build/runtime.26bd8744.js",
-        "/build/0.2375624d.js",
-        "/build/1.76893ba2.js",
-        "/build/js/showmore.add11adf.js"
+        "http://localhost:8080/build/runtime.js",
+        "http://localhost:8080/build/vendors~css/app~js/addcomment~js/app~js/editpicture~js/previewmedia~js/showmore~js/slide.js",
+        "http://localhost:8080/build/vendors~js/addcomment~js/app~js/editpicture~js/previewmedia~js/showmore~js/slide.js",
+        "http://localhost:8080/build/vendors~js/addcomment~js/app~js/editpicture~js/previewmedia~js/showmore.js",
+        "http://localhost:8080/build/js/showmore.js"
       ]
     },
     "js/editpicture": {
       "js": [
-        "/build/runtime.26bd8744.js",
-        "/build/0.2375624d.js",
-        "/build/1.76893ba2.js",
-        "/build/js/editpicture.b7b68ccc.js"
+        "http://localhost:8080/build/runtime.js",
+        "http://localhost:8080/build/vendors~css/app~js/addcomment~js/app~js/editpicture~js/previewmedia~js/showmore~js/slide.js",
+        "http://localhost:8080/build/vendors~js/addcomment~js/app~js/editpicture~js/previewmedia~js/showmore~js/slide.js",
+        "http://localhost:8080/build/vendors~js/addcomment~js/app~js/editpicture~js/previewmedia~js/showmore.js",
+        "http://localhost:8080/build/vendors~js/addcomment~js/editpicture~js/previewmedia.js",
+        "http://localhost:8080/build/js/editpicture.js"
       ]
     },
     "js/addcomment": {
       "js": [
-        "/build/runtime.26bd8744.js",
-        "/build/0.2375624d.js",
-        "/build/1.76893ba2.js",
-        "/build/js/addcomment.04fb6cee.js"
+        "http://localhost:8080/build/runtime.js",
+        "http://localhost:8080/build/vendors~css/app~js/addcomment~js/app~js/editpicture~js/previewmedia~js/showmore~js/slide.js",
+        "http://localhost:8080/build/vendors~js/addcomment~js/app~js/editpicture~js/previewmedia~js/showmore~js/slide.js",
+        "http://localhost:8080/build/vendors~js/addcomment~js/app~js/editpicture~js/previewmedia~js/showmore.js",
+        "http://localhost:8080/build/vendors~js/addcomment~js/editpicture~js/previewmedia.js",
+        "http://localhost:8080/build/js/addcomment.js"
       ]
     },
     "js/previewmedia": {
       "js": [
-        "/build/runtime.26bd8744.js",
-        "/build/0.2375624d.js",
-        "/build/1.76893ba2.js",
-        "/build/js/previewmedia.7d9e40a3.js"
+        "http://localhost:8080/build/runtime.js",
+        "http://localhost:8080/build/vendors~css/app~js/addcomment~js/app~js/editpicture~js/previewmedia~js/showmore~js/slide.js",
+        "http://localhost:8080/build/vendors~js/addcomment~js/app~js/editpicture~js/previewmedia~js/showmore~js/slide.js",
+        "http://localhost:8080/build/vendors~js/addcomment~js/app~js/editpicture~js/previewmedia~js/showmore.js",
+        "http://localhost:8080/build/vendors~js/addcomment~js/editpicture~js/previewmedia.js",
+        "http://localhost:8080/build/js/previewmedia.js"
       ]
     },
     "css/app": {
       "js": [
-        "/build/runtime.26bd8744.js"
+        "http://localhost:8080/build/runtime.js",
+        "http://localhost:8080/build/vendors~css/app~js/addcomment~js/app~js/editpicture~js/previewmedia~js/showmore~js/slide.js"
       ],
       "css": [
-        "/build/css/app.b7fdc758.css"
+        "http://localhost:8080/build/css/app.css"
       ]
     }
   }

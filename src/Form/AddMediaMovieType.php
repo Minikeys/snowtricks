@@ -20,7 +20,7 @@ class AddMediaMovieType extends AbstractType
                     'Dailymotion' => 'dailymotion',
                 ]
             ])
-            ->add('link', UrlType::class);
+            ->add('link', UrlType::class, ['label' => 'Liens Youtube ou Dailymotion']);
     }
 
     public function configureOptions(OptionsResolver $resolver)

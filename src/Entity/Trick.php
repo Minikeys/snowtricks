@@ -11,7 +11,7 @@ use Gedmo\Mapping\Annotation as Gedmo;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\TrickRepository")
- * @UniqueEntity("name", message="Name of trick is already used !")
+ * @UniqueEntity("name", message="Nom de trick déjà utilisé!")
  */
 class Trick
 {
@@ -42,7 +42,7 @@ class Trick
      * @ORM\Column(type="string", length=255, nullable=true)
      * @Assert\File(
      *     mimeTypes={"image/jpeg", "image/png"},
-     *     mimeTypesMessage="Only jpg, jpeg or png pictures",
+     *     mimeTypesMessage="Seul les formats jpg, jpeg or png sont autorisés.",
      * )
      */
     private $picture;

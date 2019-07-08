@@ -52,6 +52,11 @@ class User implements UserInterface
      */
     private $name;
 
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $ResetToken;
+
     public function __construct()
     {
         $this->tricks = new ArrayCollection();
@@ -206,6 +211,18 @@ class User implements UserInterface
     public function setName(string $name): self
     {
         $this->name = $name;
+
+        return $this;
+    }
+
+    public function getResetToken(): ?string
+    {
+        return $this->ResetToken;
+    }
+
+    public function setResetToken(?string $ResetToken): self
+    {
+        $this->ResetToken = $ResetToken;
 
         return $this;
     }

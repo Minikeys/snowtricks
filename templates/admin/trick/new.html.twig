@@ -1,0 +1,57 @@
+{% extends 'base.html.twig' %}
+
+{% block title 'Nouveau Trick' %}
+
+{% block stylesheets %}
+
+{% endblock %}
+
+{% block body %}
+<main role="main">
+    <div class="container-trick">
+            <div class="row-justify">
+                    <div class="col" id="trick" style="background-image: url({{ asset('img/background_home.jpg') }})">
+                    <div class="landing-text">
+                        <h1 class="display-3">Nouveau trick</h1>
+                    </div>
+            </div>
+        <section id="flashes">
+            {% for message in app.flashes ('success') %}
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                    {{ message }}
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            {% endfor %}
+            {% for message in app.flashes ('error') %}
+                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                    {{ message }}
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            {% endfor %}
+        </section>
+        <section id="details">
+            <div class="row-fluid">
+                <div class="col">
+                    {{ form_start(form) }}
+                    {{ form_row(form.name) }}
+                    {{ form_row(form.picture) }}
+                    {{ form_row(form.description) }}
+                    {{ form_row(form.category) }}
+                    <div class="d-flex justify-content-end">
+                        <button class="btn btn-primary">Créer</button>
+                    </div>
+                    {{ form_end(form) }}
+                </div>
+            </div>
+        </section>
+    </div>
+</main>
+
+{% endblock %}
+
+{% block javascripts %}
+{% endblock %}

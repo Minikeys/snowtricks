@@ -55,8 +55,6 @@ class AdminPictureController extends AbstractController
             if($form->isValid()){
                 $oldpicture = $this->repository->getCurrentPicture($id);
                 $dir = $this->getParameter('media_directory');
-
-
                 $picturefile = $form['picture']->getData();
 
                 if($picturefile){

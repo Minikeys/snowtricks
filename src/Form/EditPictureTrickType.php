@@ -13,7 +13,7 @@ class EditPictureTrickType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('picture', FileType::class, array('data_class' => null))
+            ->add('picture', FileType::class, array('data_class' => null, 'label' => 'Image à la une'))
         ;
     }
 

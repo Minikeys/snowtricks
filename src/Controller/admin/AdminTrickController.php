@@ -6,9 +6,12 @@ namespace App\Controller\admin;
 
 use App\Entity\Trick;
 use App\Form\EditTrickType;
+use App\Form\NewTrickType;
 use App\Repository\TrickRepository;
+use DateTime;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Doctrine\Common\Persistence\ObjectManager;
+use Symfony\Component\HttpFoundation\File\Exception\FileException;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -32,12 +35,58 @@ class AdminTrickController extends AbstractController
     }
 
     /**
+     * @param Request $request
+     *
+     * @return RedirectResponse|Response
+     * @throws \Exception
+     * @Route("/admin/trick/new/", name="admin.trick.new", methods="GET|POST")
+     */
+    public function newTrick(Request $request){
+
+        $trick = new Trick();
+        $form = $this->createForm(NewTrickType::class, $trick);
+        $form->handleRequest($request);
+
+        if($form->isSubmitted() && $form->isValid()){
+
+            $picturefile = $form['picture']->getData();
+
+            if($picturefile) {
+                $newFilename = uniqid() . '.' . $picturefile->getClientOriginalExtension();
+
+                try {
+                    $picturefile->move(
+                        $this->getParameter('media_directory'),
+                        $newFilename
+                    );
+                } catch (FileException $e) {
+                    // ... handle exception if something happens during file upload
+                }
+                $trick->setPicture($newFilename);
+            }
+            $this->em->persist($trick);
+            $trick->setUpdateAt(new DateTime());
+            $trick->setCreatedAt(new DateTime());
+            $trick->setPublished('1');
+            $trick->setAuthor($this->getUser());
+            $this->em->flush();
+            $this->addFlash('success', 'Trick ajouté avec succès');
+            return $this->redirectToRoute('trick.show', array('slug' => $trick->getId(), 'id' => $trick->getId()));
+        }
+
+        return $this->render('admin/trick/new.html.twig', [
+            'form' => $form->createView()
+        ]);
+
+    }
+
+    /**
      * @param Trick $trick
      * @param Request $request
      *
      * @return RedirectResponse|Response
+     * @throws \Exception
      * @Route("/admin/trick/edit/{id}", name="admin.trick.edit", methods="GET|POST")
-     *
      */
     public function editTrick(Trick $trick, Request $request){
 
@@ -45,8 +94,10 @@ class AdminTrickController extends AbstractController
         $form->handleRequest($request);
 
         if($form->isSubmitted() && $form->isValid()){
+            $this->em->persist($trick);
+            $trick->setUpdateAt(new DateTime());
             $this->em->flush();
-            $this->addFlash('success', 'Trick edit success');
+            $this->addFlash('success', 'Trick edité avec succès');
             return $this->redirectToRoute('trick.show', array('slug' => $trick->getId(), 'id' => $trick->getId()));
         }
 

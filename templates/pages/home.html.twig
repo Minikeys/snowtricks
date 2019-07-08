@@ -12,9 +12,18 @@
             </div>
             <div id="scroll-down"><a class="btn btn-secondary" href="#show-tricks"><i class="fas fa-lg fa-chevron-down"></i></a></div>
         </div>
-        <section id="show-tricks" style="padding-top: 10px">
+        <section id="show-tricks">
             <div class="container-fluid">
-                <h1>Les tricks</h1>
+                <div class="row justify-content-center">
+                    <div class="col">
+                        <h1>Les tricks</h1>
+                    </div>
+                    {% if is_granted('ROLE_USER') %}
+                    <div class="col-md-2 text-right">
+                        <a class="btn btn-primary" href="{{ path('admin.trick.new') }}" role="button">Ajouter un trick</a>
+                    </div>
+                    {% endif %}
+                </div>
                 {% for message in app.flashes ('success') %}
                     <div class="alert alert-success alert-dismissible fade show" role="alert">
                         {{ message }}
