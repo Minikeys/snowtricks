@@ -102,7 +102,7 @@ class PasswordController extends AbstractController
             return $this->redirectToRoute('home');
         }else {
 
-            return $this->render('security/resetPassword.html.twig', ['token' => $token]);
+            return $this->render('security/resetpassword.html.twig', ['token' => $token]);
         }
 
     }
