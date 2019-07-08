@@ -38,7 +38,19 @@
                     <div class="col">
                         <div class="responsive">
                             {% for media in trick.media %}
-                            <div><img src="{{ asset(dir_media) ~ media.file }}" class="card-img-top" alt="test"></div>
+                                {% if media.type == 'picture' %}
+                                    <div id="media-{{ media.id }}">
+                                        <img src="{{ asset(dir_media) ~ media.file }}" class="card-img-top" alt="test" data-toggle="modal" data-target="#modal-preview-media" data-id="{{ media.id }}" data-file="{{ media.file }}"  data-type="{{ media.type }}">
+                                    </div>
+                                {% elseif media.type == 'youtube' %}
+                                    <div id="media-{{ media.id }}">
+                                        <img src="https://img.youtube.com/vi/{{ media.link }}/maxresdefault.jpg" class="card-img-top" alt="test" data-toggle="modal" data-target="#modal-preview-media" data-id="{{ media.id }}" data-link="{{ media.link }}" data-type="{{ media.type }}">
+                                    </div>
+                                {% elseif media.type == 'dailymotion' %}
+                                    <div id="media-{{ media.id }}">
+                                        <img src="https://www.dailymotion.com/thumbnail/video/{{ media.link }}" class="card-img-top" alt="test" data-toggle="modal" data-target="#modal-preview-media" data-id="{{ media.id }}" data-link="{{ media.link }}"  data-type="{{ media.type }}">
+                                    </div>
+                                {% endif %}
                             {% endfor %}
                         </div>
                     </div>
@@ -107,6 +119,23 @@
 
     <button type="button" class="btn btn-secondary" id="scroll-top"><i class="fas fa-chevron-up"></i></button>
     </section>
+    <div class="modal fade" id="modal-preview-media" tabindex="-1" role="dialog" aria-labelledby="modal-preview-media" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body" style="text-align: center">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </main>
 
 {% endblock %}
@@ -115,4 +144,5 @@
     {{ encore_entry_script_tags('js/slide') }}
     {{ encore_entry_script_tags('js/showmore') }}
     {{ encore_entry_script_tags('js/addcomment') }}
+    {{ encore_entry_script_tags('js/previewmedia') }}
 {% endblock %}

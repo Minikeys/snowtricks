@@ -208,8 +208,8 @@ $(document).on('submit', "form[name='add_media_movie']", function (e) {
             var json = $.parseJSON(data);
             if(json.message == 'success'){
                 console.log(data);
-                //$(modal).modal('hide');
-                //location.reload();
+                $(modal).modal('hide');
+                location.reload();
             }else{
                 for(error in json.error){
                     $("#error").append('<div class="alert alert-warning alert-dismissible fade show" role="alert">'+
