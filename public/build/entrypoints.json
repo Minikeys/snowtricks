@@ -1,0 +1,60 @@
+{
+  "entrypoints": {
+    "js/app": {
+      "js": [
+        "/build/runtime.26bd8744.js",
+        "/build/0.2375624d.js",
+        "/build/1.76893ba2.js",
+        "/build/js/app.55ae66c4.js"
+      ]
+    },
+    "js/slide": {
+      "js": [
+        "/build/runtime.26bd8744.js",
+        "/build/0.2375624d.js",
+        "/build/2.dbecf8cb.js",
+        "/build/js/slide.a4922779.js"
+      ]
+    },
+    "js/showmore": {
+      "js": [
+        "/build/runtime.26bd8744.js",
+        "/build/0.2375624d.js",
+        "/build/1.76893ba2.js",
+        "/build/js/showmore.add11adf.js"
+      ]
+    },
+    "js/editpicture": {
+      "js": [
+        "/build/runtime.26bd8744.js",
+        "/build/0.2375624d.js",
+        "/build/1.76893ba2.js",
+        "/build/js/editpicture.b7b68ccc.js"
+      ]
+    },
+    "js/addcomment": {
+      "js": [
+        "/build/runtime.26bd8744.js",
+        "/build/0.2375624d.js",
+        "/build/1.76893ba2.js",
+        "/build/js/addcomment.04fb6cee.js"
+      ]
+    },
+    "js/previewmedia": {
+      "js": [
+        "/build/runtime.26bd8744.js",
+        "/build/0.2375624d.js",
+        "/build/1.76893ba2.js",
+        "/build/js/previewmedia.7d9e40a3.js"
+      ]
+    },
+    "css/app": {
+      "js": [
+        "/build/runtime.26bd8744.js"
+      ],
+      "css": [
+        "/build/css/app.b7fdc758.css"
+      ]
+    }
+  }
+}
