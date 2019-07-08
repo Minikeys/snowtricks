@@ -3,6 +3,7 @@ require('jquery-form');
 require('bootstrap');
 
 
+
 $('#modal-edit-media').on('shown.bs.modal', function (event) {
     var modal = $(this);
     var button = $(event.relatedTarget);
@@ -148,7 +149,7 @@ $(document).on('submit', "form[name='delete_media']", function (e) {
     });
 });
 
-$(document).on('submit', "form[name='add_media']", function (e) {
+$(document).on('submit', "form[name='add_media_picture']", function (e) {
 
     e.preventDefault();
 
@@ -166,6 +167,49 @@ $(document).on('submit', "form[name='add_media']", function (e) {
             var json = $.parseJSON(data);
             if(json.message == 'success'){
                 console.log(data);
+                $(modal).modal('hide');
+                location.reload();
+
+            }else{
+                for(error in json.error){
+                    $("#error").append('<div class="alert alert-warning alert-dismissible fade show" role="alert">'+
+                        json.error[error] +
+                        '  <button type="button" class="close" data-dismiss="alert" aria-label="Close">'+
+                        '    <span aria-hidden="true">×</span>'+
+                        '  </button>'+
+                        '</div>');
+                }
+                $submitButton.html('Enregistrer');
+                $submitButton.prop('disabled', false);
+
+            }
+        },
+        error: function(jqXHR, status, error) {
+            console.log(error);
+        }
+    });
+});
+
+$(document).on('submit', "form[name='add_media_movie']", function (e) {
+
+    e.preventDefault();
+
+    $form = $(e.target);
+    var modal = $('#modal-edit-media');
+
+    var $submitButton = $form.find(':submit');
+    $submitButton.html('<i class="fas fa-spinner fa-pulse"></i>');
+    $submitButton.prop('disabled', true);
+
+    $form.ajaxSubmit({
+        type: 'post',
+        success: function(data) {
+            console.log(data);
+            var json = $.parseJSON(data);
+            if(json.message == 'success'){
+                console.log(data);
+                //$(modal).modal('hide');
+                //location.reload();
             }else{
                 for(error in json.error){
                     $("#error").append('<div class="alert alert-warning alert-dismissible fade show" role="alert">'+

@@ -38,7 +38,7 @@
                     <div class="col">
                         <div class="responsive">
                             {% for media in trick.media %}
-                            <div><img src="{{ asset('img/') ~ media.file }}" class="card-img-top" alt="test"></div>
+                            <div><img src="{{ asset(dir_media) ~ media.file }}" class="card-img-top" alt="test"></div>
                             {% endfor %}
                         </div>
                     </div>

@@ -2,23 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c6004f33-565c-48a8-852a-4aa1a1761c00" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/assets/js/addcomment.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/js/editmedia.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/form/addmedia.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/form/deletemedia.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/js/editpicture.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/editpicture.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/slide.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/slide.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/CommentController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/CommentController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/TrickController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/TrickController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/admin/AdminMediaController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/admin/AdminMediaController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/admin/AdminTrickController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/admin/AdminTrickController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Media.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Media.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/CommentRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/CommentRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/AddMediaType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/AddMediaMovieType.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/admin/trick/edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/trick/edit.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/form/addmedia.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/form/addmedia.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/pages/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pages/show.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.config.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -34,72 +24,58 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/js/editpicture.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="14">
-              <caret line="3" selection-start-line="3" selection-end-line="3" />
+            <state relative-caret-position="392">
+              <caret line="210" column="18" selection-start-line="210" selection-start-column="18" selection-end-line="210" selection-end-column="18" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assets/js/slide.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="84">
+              <caret line="4" selection-start-line="4" selection-end-line="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Controller/admin/AdminMediaController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="531">
+              <caret line="135" column="48" selection-start-line="135" selection-start-column="37" selection-end-line="135" selection-end-column="48" />
+              <folding>
+                <element signature="e#42#63#0#PHP" expanded="true" />
+                <element signature="e#1313#1336#0#PHP" expanded="true" />
+                <element signature="e#2914#2940#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/form/addmedia.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="21">
+              <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/admin/trick/edit.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="8">
-              <caret line="24" column="41" selection-start-line="24" selection-start-column="41" selection-end-line="24" selection-end-column="41" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Controller/admin/AdminPictureController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="155">
-              <caret line="45" column="8" selection-start-line="45" selection-start-column="8" selection-end-line="45" selection-end-column="46" />
+            <state relative-caret-position="581">
+              <caret line="50" column="110" selection-start-line="50" selection-start-column="110" selection-end-line="50" selection-end-column="110" />
               <folding>
-                <element signature="e#42#63#0#PHP" expanded="true" />
-                <element signature="e#1301#1327#0#PHP" expanded="true" />
-                <element signature="e#3116#3146#0#PHP" expanded="true" />
-                <element signature="e#4004#4034#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Controller/admin/AdminTrickController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="452">
-              <caret line="54" column="22" selection-start-line="54" selection-start-column="22" selection-end-line="54" selection-end-column="41" />
-              <folding>
-                <element signature="e#42#63#0#PHP" expanded="true" />
-                <element signature="e#1356#1368#0#PHP" expanded="true" />
-                <element signature="e#1470#1498#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Controller/TrickController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="562">
-              <caret line="54" column="54" selection-start-line="54" selection-start-column="54" selection-end-line="54" selection-end-column="54" />
-              <folding>
-                <element signature="e#36#57#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Controller/CommentController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="31">
-              <caret line="36" column="30" selection-start-line="36" selection-start-column="30" selection-end-line="36" selection-end-column="30" />
-              <folding>
-                <element signature="e#35#58#0#PHP" expanded="true" />
+                <element signature="n#style#0;n#section#0;n#div#0;n#div#0;n#div#0;n#main#0;n#!!top" expanded="true" />
+                <element signature="e#2040#2061#0#Twig" expanded="true" />
+                <element signature="e#2419#2443#0#Twig" expanded="true" />
+                <element signature="e#2882#2906#0#Twig" expanded="true" />
+                <element signature="e#3305#3329#0#Twig" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -168,21 +144,23 @@
         <option value="$PROJECT_DIR$/templates/base.html.twig" />
         <option value="$PROJECT_DIR$/assets/js/editmedia.js" />
         <option value="$PROJECT_DIR$/templates/form/deletemedia.html.twig" />
-        <option value="$PROJECT_DIR$/assets/js/slide.js" />
-        <option value="$PROJECT_DIR$/templates/admin/trick/edit.html.twig" />
         <option value="$PROJECT_DIR$/src/Controller/admin/AdminTrickController.php" />
         <option value="$PROJECT_DIR$/src/Entity/Media.php" />
-        <option value="$PROJECT_DIR$/templates/form/addmedia.html.twig" />
-        <option value="$PROJECT_DIR$/src/Controller/admin/AdminMediaController.php" />
-        <option value="$PROJECT_DIR$/src/Form/AddMediaType.php" />
         <option value="$PROJECT_DIR$/webpack.config.js" />
         <option value="$PROJECT_DIR$/src/Controller/TrickController.php" />
         <option value="$PROJECT_DIR$/src/Form/CommentType.php" />
         <option value="$PROJECT_DIR$/src/Repository/CommentRepository.php" />
-        <option value="$PROJECT_DIR$/templates/pages/show.html.twig" />
         <option value="$PROJECT_DIR$/assets/js/addcomment.js" />
         <option value="$PROJECT_DIR$/src/Controller/CommentController.php" />
+        <option value="$PROJECT_DIR$/src/Form/AddMediaType.php" />
+        <option value="$PROJECT_DIR$/src/Form/AddMediaPictureType.php" />
+        <option value="$PROJECT_DIR$/src/Form/AddMediaMovieType.php" />
+        <option value="$PROJECT_DIR$/templates/form/addmedia.html.twig" />
+        <option value="$PROJECT_DIR$/templates/pages/show.html.twig" />
+        <option value="$PROJECT_DIR$/assets/js/slide.js" />
         <option value="$PROJECT_DIR$/assets/js/editpicture.js" />
+        <option value="$PROJECT_DIR$/src/Controller/admin/AdminMediaController.php" />
+        <option value="$PROJECT_DIR$/templates/admin/trick/edit.html.twig" />
       </list>
     </option>
   </component>
@@ -411,23 +389,23 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="jsx.switch.disabled" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/templates/form" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/Form" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/Form" />
+      <recent name="$PROJECT_DIR$/templates/form" />
+      <recent name="$PROJECT_DIR$/templates/admin" />
+      <recent name="$PROJECT_DIR$/templates/showmore" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/templates/admin/trick" />
       <recent name="$PROJECT_DIR$/templates/showmore" />
       <recent name="$PROJECT_DIR$/templates/pages" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/templates/form" />
-      <recent name="$PROJECT_DIR$/src/Form" />
-      <recent name="$PROJECT_DIR$/templates/admin" />
-      <recent name="$PROJECT_DIR$/templates/showmore" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -463,12 +441,12 @@
       <workItem from="1561500139958" duration="9593000" />
       <workItem from="1561896092042" duration="31337000" />
       <workItem from="1562244605031" duration="576000" />
-      <workItem from="1562573358860" duration="10219000" />
+      <workItem from="1562573358860" duration="18068000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="115531000" />
+    <option name="totallyTimeSpent" value="123380000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1440" y="23" width="2560" height="1207" extended-state="0" />
@@ -520,13 +498,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/composer.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="25" column="48" selection-start-line="25" selection-start-column="48" selection-end-line="25" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/build/manifest.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="21">
@@ -640,20 +611,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/packages/twig.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="7" column="17" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/services.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="11" column="9" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Repository/TrickRepository.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1239">
@@ -700,13 +657,6 @@
           <folding>
             <element signature="e#540#566#0#Twig" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/js/editmedia.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
         </state>
       </provider>
     </entry>
@@ -758,44 +708,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/js/slide.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="62">
-          <caret line="5" column="18" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Repository/MediaRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="14" column="6" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Form/EditPictureTrickType.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="15" column="12" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="74" />
-          <folding>
-            <element signature="e#28#49#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/form/updatepicture.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
           <caret line="9" column="10" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/admin/AdminMediaController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1239">
-          <caret line="68" column="5" selection-start-line="68" selection-start-column="5" selection-end-line="68" selection-end-column="5" />
-          <folding>
-            <element signature="e#42#63#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -805,16 +721,6 @@
           <caret line="31" column="10" selection-start-line="31" selection-start-column="10" selection-end-line="31" selection-end-column="10" />
           <folding>
             <element signature="e#30#62#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Form/AddMediaType.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="14" column="39" selection-start-line="14" selection-start-column="39" selection-end-line="14" selection-end-column="39" />
-          <folding>
-            <element signature="e#28#49#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -833,49 +739,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/form/addmedia.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="6" selection-start-line="6" selection-end-line="6" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/admin/trick/edit.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8">
-          <caret line="24" column="41" selection-start-line="24" selection-start-column="41" selection-end-line="24" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Entity/Comment.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="416">
           <caret line="27" column="13" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/admin/AdminPictureController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="155">
-          <caret line="45" column="8" selection-start-line="45" selection-start-column="8" selection-end-line="45" selection-end-column="46" />
-          <folding>
-            <element signature="e#42#63#0#PHP" expanded="true" />
-            <element signature="e#1301#1327#0#PHP" expanded="true" />
-            <element signature="e#3116#3146#0#PHP" expanded="true" />
-            <element signature="e#4004#4034#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/admin/AdminTrickController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="452">
-          <caret line="54" column="22" selection-start-line="54" selection-start-column="22" selection-end-line="54" selection-end-column="41" />
-          <folding>
-            <element signature="e#42#63#0#PHP" expanded="true" />
-            <element signature="e#1356#1368#0#PHP" expanded="true" />
-            <element signature="e#1470#1498#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -917,19 +784,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/pages/show.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="76" column="28" selection-start-line="76" selection-start-column="21" selection-end-line="76" selection-end-column="28" />
-          <folding>
-            <element signature="n#style#0;n#section#2;n#div#0;n#div#0;n#section#0;n#main#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#div#1;n#div#0;n#section#2;n#div#0;n#div#0;n#section#0;n#main#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#section#3;n#div#0;n#div#0;n#section#0;n#main#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#ul#0;n#section#3;n#div#0;n#div#0;n#section#0;n#main#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Controller/CommentController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="31">
@@ -940,10 +794,140 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Repository/MediaRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="14" column="6" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Form/EditPictureTrickType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="8" column="54" lean-forward="true" selection-start-line="8" selection-start-column="54" selection-end-line="8" selection-end-column="54" />
+          <folding>
+            <element signature="e#28#49#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/admin/AdminTrickController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="423">
+          <caret line="53" column="30" lean-forward="true" selection-start-line="53" selection-start-column="30" selection-end-line="53" selection-end-column="30" />
+          <folding>
+            <element signature="e#42#63#0#PHP" expanded="true" />
+            <element signature="e#1356#1368#0#PHP" expanded="true" />
+            <element signature="e#1470#1498#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/packages/twig.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="7" column="17" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/services.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/editmedia.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="63">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/pages/show.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="118">
+          <caret line="28" column="30" selection-start-line="28" selection-start-column="30" selection-end-line="28" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Form/AddMediaPictureType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="10" column="25" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="25" />
+          <folding>
+            <element signature="e#28#49#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Form/AddMediaMovieType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="11" column="23" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="23" />
+          <folding>
+            <element signature="e#28#49#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/slide.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/admin/AdminPictureController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="386">
+          <caret line="120" selection-start-line="120" selection-end-line="122" selection-end-column="45" />
+          <folding>
+            <element signature="e#42#63#0#PHP" expanded="true" />
+            <element signature="e#1301#1327#0#PHP" expanded="true" />
+            <element signature="e#3116#3146#0#PHP" expanded="true" />
+            <element signature="e#4004#4034#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/assets/js/editpicture.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="14">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        <state relative-caret-position="392">
+          <caret line="210" column="18" selection-start-line="210" selection-start-column="18" selection-end-line="210" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/form/addmedia.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21">
+          <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/admin/AdminMediaController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="531">
+          <caret line="135" column="48" selection-start-line="135" selection-start-column="37" selection-end-line="135" selection-end-column="48" />
+          <folding>
+            <element signature="e#42#63#0#PHP" expanded="true" />
+            <element signature="e#1313#1336#0#PHP" expanded="true" />
+            <element signature="e#2914#2940#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/admin/trick/edit.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="581">
+          <caret line="50" column="110" selection-start-line="50" selection-start-column="110" selection-end-line="50" selection-end-column="110" />
+          <folding>
+            <element signature="n#style#0;n#section#0;n#div#0;n#div#0;n#div#0;n#main#0;n#!!top" expanded="true" />
+            <element signature="e#2040#2061#0#Twig" expanded="true" />
+            <element signature="e#2419#2443#0#Twig" expanded="true" />
+            <element signature="e#2882#2906#0#Twig" expanded="true" />
+            <element signature="e#3305#3329#0#Twig" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

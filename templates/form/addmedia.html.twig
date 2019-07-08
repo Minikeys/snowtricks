@@ -4,16 +4,41 @@
         <span aria-hidden="true">&times;</span>
     </button>
 </div>
-{{ form_start(form) }}
 <div class="modal-body">
-    <div id="error">
+    <ul class="nav nav-tabs" id="mediaTab" role="tablist">
+        <li class="nav-item">
+            <a class="nav-link active" id="picture-tab" data-toggle="tab" href="#picture" role="tab" aria-controls="picture" aria-selected="true">Photo</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="movie-tab" data-toggle="tab" href="#movie" role="tab" aria-controls="movie" aria-selected="false">Vidéo</a>
+        </li>
+    </ul>
+    <div class="tab-content" id="mediaTabContent">
+        <div class="tab-pane fade show active" id="picture" role="tabpanel" aria-labelledby="picture-tab">
+            {{ form_start(formpicture) }}
+            <div id="error">
+            </div>
+            {{ form_widget(formpicture) }}
+            <button type="submit" class="btn btn-primary" data-label="Enregistrer">
+                Ajouter
+            </button>
+            {{ form_end(formpicture) }}
+        </div>
+        <div class="tab-pane fade" id="movie" role="tabpanel" aria-labelledby="movie-tab">
+            {{ form_start(formmovie) }}
+            <div id="error">
+            </div>
+            {{ form_widget(formmovie) }}
+            <button type="submit" class="btn btn-primary" data-label="Enregistrer">
+                Ajouter
+            </button>
+            {{ form_end(formmovie) }}
+        </div>
     </div>
-    {{ form_widget(form) }}
+
+
     <input id="oldpicture" name="oldpicture" type="hidden" value="test">
 </div>
 <div class="modal-footer">
-    <button type="submit" class="btn btn-primary" data-label="Enregistrer">
-        Enregistrer
-    </button>
 </div>
-{{ form_end(form) }}
+

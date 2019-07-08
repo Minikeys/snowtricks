@@ -29,7 +29,6 @@
                             </div>
                         </div>
             </div>
-        {% if trick.media is not empty %}
         <section id="media" style="padding-top: 10px">
             <div class="row-fluid">
                 <div class="row">
@@ -39,16 +38,25 @@
                                 <img src="{{ asset('img/addmedia.jpg')}}" class="card-img-top" alt="test" data-toggle="modal" data-target="#modal-edit-media" data-path="{{ path('admin.trick.add.media', {id: trick.id}) }}">
                             </div>
                             {% for media in trick.media %}
-                            <div id="media-{{ media.id }}">
-                                <img src="{{ asset('img/') ~ media.file }}" class="card-img-top" alt="test" data-toggle="modal" data-target="#modal-edit-media" data-path="{{ path('admin.trick.delete.media', {id: media.id}) }}">
-                            </div>
+                                {% if media.type == 'picture' %}
+                                    <div id="media-{{ media.id }}">
+                                        <img src="{{ asset(dir_media) ~ media.file }}" class="card-img-top" alt="test" data-toggle="modal" data-target="#modal-edit-media" data-path="{{ path('admin.trick.delete.media', {id: media.id}) }}">
+                                    </div>
+                                {% elseif media.type == 'youtube' %}
+                                    <div id="media-{{ media.id }}">
+                                        <img src="https://img.youtube.com/vi/{{ media.link }}/maxresdefault.jpg" class="card-img-top" alt="test" data-toggle="modal" data-target="#modal-edit-media" data-path="{{ path('admin.trick.delete.media', {id: media.id}) }}">
+                                    </div>
+                                {% elseif media.type == 'dailymotion' %}
+                                    <div id="media-{{ media.id }}">
+                                        <img src="https://www.dailymotion.com/thumbnail/video/{{ media.link }}" class="card-img-top" alt="test" data-toggle="modal" data-target="#modal-edit-media" data-path="{{ path('admin.trick.delete.media', {id: media.id}) }}">
+                                    </div>
+                                {% endif %}
                             {% endfor %}
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        {% endif %}
         <section id="flashes" style="padding-top: 10px">
             {% for message in app.flashes ('success') %}
                 <div class="alert alert-success alert-dismissible fade show" role="alert">
