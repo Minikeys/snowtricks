@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c6004f33-565c-48a8-852a-4aa1a1761c00" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/assets/js/previewmedia.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/previewmedia.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/admin/AdminMediaController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/admin/AdminMediaController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -28,7 +27,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Controller/admin/AdminMediaController.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="435">
@@ -37,6 +36,15 @@
                 <element signature="e#42#63#0#PHP" expanded="true" />
                 <element signature="e#2914#2940#0#PHP" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.env">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="336">
+              <caret line="16" column="12" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -102,7 +110,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/.env" />
         <option value="$PROJECT_DIR$/composer.json" />
         <option value="$PROJECT_DIR$/src/Controller/LuckyController.php" />
         <option value="$PROJECT_DIR$/assets/css/app.css" />
@@ -153,6 +160,7 @@
         <option value="$PROJECT_DIR$/templates/pages/show.html.twig" />
         <option value="$PROJECT_DIR$/assets/js/previewmedia.js" />
         <option value="$PROJECT_DIR$/src/Controller/admin/AdminMediaController.php" />
+        <option value="$PROJECT_DIR$/.env" />
       </list>
     </option>
   </component>
@@ -433,12 +441,12 @@
       <workItem from="1561500139958" duration="9593000" />
       <workItem from="1561896092042" duration="31337000" />
       <workItem from="1562244605031" duration="576000" />
-      <workItem from="1562573358860" duration="20038000" />
+      <workItem from="1562573358860" duration="20163000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="125350000" />
+    <option name="totallyTimeSpent" value="125475000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1440" y="23" width="2560" height="1207" extended-state="0" />
@@ -490,13 +498,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/public/build/manifest.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="1" column="42" selection-start-line="1" selection-start-column="20" selection-end-line="1" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Controller/LuckyController.php" />
     <entry file="file://$PROJECT_DIR$/config/routes.yaml">
       <provider selected="true" editor-type-id="text-editor">
@@ -923,6 +924,13 @@
             <element signature="e#42#63#0#PHP" expanded="true" />
             <element signature="e#2914#2940#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.env">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="16" column="12" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="12" />
         </state>
       </provider>
     </entry>
