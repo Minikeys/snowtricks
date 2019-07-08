@@ -159,8 +159,7 @@ class AdminMediaController extends AbstractController
 
         return $this->render('form/addmedia.html.twig', [
             'formmovie' => $formmovie->createView(),
-            'formpicture' => $formpicture->createView(),
-            'media' => $media
+            'formpicture' => $formpicture->createView()
         ]);
 
     }

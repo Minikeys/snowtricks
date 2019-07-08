@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c6004f33-565c-48a8-852a-4aa1a1761c00" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/editmedia.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/previewmedia.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/editpicture.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/editpicture.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/trick/edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/trick/edit.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/pages/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pages/show.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/previewmedia.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/previewmedia.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/admin/AdminMediaController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/admin/AdminMediaController.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -33,10 +29,23 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Controller/admin/AdminMediaController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="435">
+              <caret line="161" column="55" selection-start-line="161" selection-start-column="55" selection-end-line="161" selection-end-column="55" />
+              <folding>
+                <element signature="e#42#63#0#PHP" expanded="true" />
+                <element signature="e#2914#2940#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/js/previewmedia.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="630">
-              <caret line="30" column="3" lean-forward="true" selection-start-line="30" selection-start-column="3" selection-end-line="30" selection-end-column="3" />
+            <state relative-caret-position="567">
+              <caret line="27" column="61" selection-start-line="27" selection-start-column="61" selection-end-line="27" selection-end-column="61" />
             </state>
           </provider>
         </entry>
@@ -138,12 +147,12 @@
         <option value="$PROJECT_DIR$/src/Form/AddMediaMovieType.php" />
         <option value="$PROJECT_DIR$/templates/form/addmedia.html.twig" />
         <option value="$PROJECT_DIR$/assets/js/slide.js" />
-        <option value="$PROJECT_DIR$/src/Controller/admin/AdminMediaController.php" />
         <option value="$PROJECT_DIR$/assets/js/editpicture.js" />
         <option value="$PROJECT_DIR$/templates/admin/trick/edit.html.twig" />
         <option value="$PROJECT_DIR$/webpack.config.js" />
         <option value="$PROJECT_DIR$/templates/pages/show.html.twig" />
         <option value="$PROJECT_DIR$/assets/js/previewmedia.js" />
+        <option value="$PROJECT_DIR$/src/Controller/admin/AdminMediaController.php" />
       </list>
     </option>
   </component>
@@ -424,18 +433,18 @@
       <workItem from="1561500139958" duration="9593000" />
       <workItem from="1561896092042" duration="31337000" />
       <workItem from="1562244605031" duration="576000" />
-      <workItem from="1562573358860" duration="19670000" />
+      <workItem from="1562573358860" duration="20038000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="124982000" />
+    <option name="totallyTimeSpent" value="125350000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1440" y="23" width="2560" height="1207" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49911505" visible="true" weight="0.11556791" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49911505" visible="true" weight="0.11556791" />
       <window_info id="Structure" order="1" sideWeight="0.50088495" side_tool="true" weight="0.19241774" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -448,7 +457,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.3295129" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.19962686" />
+      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.19962686" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" weight="0.3295129" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -853,18 +862,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/admin/AdminMediaController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="489">
-          <caret line="133" column="61" lean-forward="true" selection-start-line="133" selection-start-column="61" selection-end-line="133" selection-end-column="61" />
-          <folding>
-            <element signature="e#42#63#0#PHP" expanded="true" />
-            <element signature="e#1313#1336#0#PHP" expanded="true" />
-            <element signature="e#2914#2940#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/js/slide.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="84">
@@ -913,8 +910,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/js/previewmedia.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="30" column="3" lean-forward="true" selection-start-line="30" selection-start-column="3" selection-end-line="30" selection-end-column="3" />
+        <state relative-caret-position="567">
+          <caret line="27" column="61" selection-start-line="27" selection-start-column="61" selection-end-line="27" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/admin/AdminMediaController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="161" column="55" selection-start-line="161" selection-start-column="55" selection-end-line="161" selection-end-column="55" />
+          <folding>
+            <element signature="e#42#63#0#PHP" expanded="true" />
+            <element signature="e#2914#2940#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
