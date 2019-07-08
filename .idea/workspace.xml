@@ -3,62 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="c6004f33-565c-48a8-852a-4aa1a1761c00" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/snowtricks.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/snowtricks.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/app.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/stof_doctrine_extensions.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/stof_doctrine_extensions.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/build/0.2375624d.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/build/1.76893ba2.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/build/2.dbecf8cb.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/build/css/app.b7fdc758.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/public/build/entrypoints.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/build/entrypoints.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/build/fonts/fa-brands-400.03783c51.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/build/fonts/fa-brands-400.7559b377.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/build/fonts/fa-brands-400.ed2b8bf1.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/build/fonts/fa-brands-400.fe9d62e0.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/build/fonts/fa-regular-400.59215032.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/build/fonts/fa-regular-400.e07d9e40.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/build/fonts/fa-regular-400.e5770f98.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/build/fonts/fa-regular-400.fc9c63c8.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/build/fonts/fa-solid-900.4bced7c4.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/build/fonts/fa-solid-900.acf50f59.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/build/fonts/fa-solid-900.b5cf8ae2.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/build/fonts/fa-solid-900.ef3df984.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/build/fonts/slick.b7c9e1e4.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/build/fonts/slick.ced611da.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/build/fonts/slick.d41f55a7.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/build/images/ajax-loader.c5cd7f53.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/build/images/fa-brands-400.073c2f3c.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/build/images/fa-regular-400.8fdea4e8.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/build/images/fa-solid-900.b557f56e.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/build/images/slick.f97e3bbf.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/build/js/addcomment.04fb6cee.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/build/js/app.55ae66c4.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/build/js/editpicture.b7b68ccc.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/build/js/previewmedia.7d9e40a3.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/build/js/showmore.add11adf.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/build/js/slide.a4922779.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/public/build/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/build/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/build/runtime.26bd8744.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/admin/AdminPictureController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/admin/AdminPictureController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/admin/AdminTrickController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/admin/AdminTrickController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Media.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Media.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Trick.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Trick.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/AddMediaMovieType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/AddMediaMovieType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/AddMediaPictureType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/AddMediaPictureType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/EditPictureTrickType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/EditPictureTrickType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/EditTrickType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/EditTrickType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/NewTrickType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/NewTrickType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/UserRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/UserRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/trick/edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/trick/edit.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/pages/home.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pages/home.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/pages/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pages/show.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/registration/register.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/registration/register.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/security/login.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/security/login.html.twig" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -93,11 +39,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/security/resetpassword.html.twig">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="357">
-              <caret line="17" column="38" lean-forward="true" selection-start-line="17" selection-start-column="38" selection-end-line="17" selection-end-column="38" />
+              <caret line="17" column="38" selection-start-line="17" selection-start-column="38" selection-end-line="17" selection-end-column="38" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.env">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="17" column="39" lean-forward="true" selection-start-line="17" selection-start-column="39" selection-end-line="17" selection-end-column="39" />
             </state>
           </provider>
         </entry>
@@ -208,7 +163,6 @@
         <option value="$PROJECT_DIR$/src/Form/EditPictureTrickType.php" />
         <option value="$PROJECT_DIR$/templates/registration/register.html.twig" />
         <option value="$PROJECT_DIR$/src/Security/ResetPassword.php" />
-        <option value="$PROJECT_DIR$/.env" />
         <option value="$PROJECT_DIR$/templates/mail/resetPasswordMail.html.twig" />
         <option value="$PROJECT_DIR$/templates/security/forgotpassword.html.twig" />
         <option value="$PROJECT_DIR$/src/Form/ResetPasswordFormType.php" />
@@ -218,6 +172,7 @@
         <option value="$PROJECT_DIR$/src/Controller/user/PasswordController.php" />
         <option value="$PROJECT_DIR$/src/Repository/UserRepository.php" />
         <option value="$PROJECT_DIR$/templates/security/resetpassword.html.twig" />
+        <option value="$PROJECT_DIR$/.env" />
       </list>
     </option>
   </component>
@@ -520,12 +475,12 @@
       <workItem from="1561500139958" duration="9593000" />
       <workItem from="1561896092042" duration="31337000" />
       <workItem from="1562244605031" duration="576000" />
-      <workItem from="1562573358860" duration="29216000" />
+      <workItem from="1562573358860" duration="29353000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="134528000" />
+    <option name="totallyTimeSpent" value="134665000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1441" y="23" width="2560" height="1207" extended-state="0" />
@@ -841,13 +796,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.env">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="693">
-          <caret line="33" column="81" selection-start-line="33" selection-start-column="81" selection-end-line="33" selection-end-column="81" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Entity/User.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="305">
@@ -998,7 +946,14 @@
     <entry file="file://$PROJECT_DIR$/templates/security/resetpassword.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
-          <caret line="17" column="38" lean-forward="true" selection-start-line="17" selection-start-column="38" selection-end-line="17" selection-end-column="38" />
+          <caret line="17" column="38" selection-start-line="17" selection-start-column="38" selection-end-line="17" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.env">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="17" column="39" lean-forward="true" selection-start-line="17" selection-start-column="39" selection-end-line="17" selection-end-column="39" />
         </state>
       </provider>
     </entry>
