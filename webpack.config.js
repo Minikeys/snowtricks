@@ -27,6 +27,7 @@ Encore
     .addEntry('js/slide', './assets/js/slide.js')
     .addEntry('js/showmore', './assets/js/showmore.js')
     .addEntry('js/editpicture', './assets/js/editpicture.js')
+    .addEntry('js/addcomment', './assets/js/addcomment.js')
     .addStyleEntry('css/app', './assets/css/app.scss')
     //.addEntry('page1', './assets/js/page1.js')
     //.addEntry('page2', './assets/js/page2.js')

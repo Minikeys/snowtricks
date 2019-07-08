@@ -39,7 +39,7 @@ class AdminTrickController extends AbstractController
      * @Route("/admin/trick/edit/{id}", name="admin.trick.edit", methods="GET|POST")
      *
      */
-    public function edit(Trick $trick, Request $request){
+    public function editTrick(Trick $trick, Request $request){
 
         $form = $this->createForm(EditTrickType::class, $trick);
         $form->handleRequest($request);
@@ -64,7 +64,7 @@ class AdminTrickController extends AbstractController
      * @return RedirectResponse
      * @Route("/admin/trick/delete/{id}", name="admin.trick.delete", methods="DELETE")
      */
-    public function delete(Trick $trick, Request $request){
+    public function deleteTrick(Trick $trick, Request $request){
 
         if($this->isCsrfTokenValid('delete' . $trick->getId(), $request->get('_token'))){
 

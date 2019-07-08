@@ -34,20 +34,13 @@
             <div class="row-fluid">
                 <div class="row">
                     <div class="col">
-                        <div class="responsive">
+                        <div id="media-slide" class="responsive">
                             <div align="center">
-                                <img src="{{ asset('img/addmedia.jpg')}}" class="card-img-top" alt="test">
+                                <img src="{{ asset('img/addmedia.jpg')}}" class="card-img-top" alt="test" data-toggle="modal" data-target="#modal-edit-media" data-path="{{ path('admin.trick.add.media', {id: trick.id}) }}">
                             </div>
                             {% for media in trick.media %}
-                            <div>
-                                <img src="{{ asset('img/') ~ media.file }}" class="card-img-top" alt="test">
-                                <div>
-                                    <div class="btn-group" role="group">
-                                        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#modal-edit-media" data-title="Delete Media {{ media.file }}">
-                                            <i class="fas fa-trash-alt"></i>
-                                        </button>
-                                    </div>
-                                </div>
+                            <div id="media-{{ media.id }}">
+                                <img src="{{ asset('img/') ~ media.file }}" class="card-img-top" alt="test" data-toggle="modal" data-target="#modal-edit-media" data-path="{{ path('admin.trick.delete.media', {id: media.id}) }}">
                             </div>
                             {% endfor %}
                         </div>

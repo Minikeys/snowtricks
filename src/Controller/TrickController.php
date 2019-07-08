@@ -5,6 +5,7 @@ namespace App\Controller;
 
 
 use App\Entity\Trick;
+use App\Form\CommentType;
 use App\Repository\CommentRepository;
 use App\Repository\TrickRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -37,6 +38,11 @@ class TrickController extends AbstractController
      */
     public function show(Trick $trick, string $slug) : Response
     {
+        $id = $trick->getId();
+        $formcomment = $this->createForm(CommentType::class, null, [
+            'action' => $this->generateUrl('admin.trick.add.comment', array('id' => $id)),
+            'method' => 'POST'
+        ]);
         if ($trick->getSlug() !== $slug){
 
             return $this->redirectToRoute('trick.show',[
@@ -45,7 +51,7 @@ class TrickController extends AbstractController
             ], 301);
 
         }
-        $id = $trick->getId();
+
         $comments = $this->commentRepository->findFirstComments($id);
         $total_comments= $this->commentRepository->getTotalComments($id);
         return $this->render('pages/show.html.twig', [
@@ -53,6 +59,7 @@ class TrickController extends AbstractController
             'current_menu' => 'home',
             'total_comments' => $total_comments,
             'comments' => $comments,
+            'formcomment' => $formcomment->createView(),
 
         ]);
     }

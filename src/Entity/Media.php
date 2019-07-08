@@ -3,6 +3,7 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\MediaRepository")
@@ -17,7 +18,11 @@ class Media
     private $id;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=255, nullable=true)
+     * @Assert\File(
+     *     mimeTypes={"image/jpeg", "image/png"},
+     *     mimeTypesMessage="Only jpg, jpeg or png pictures",
+     * )
      */
     private $file;
 
@@ -36,6 +41,14 @@ class Media
      * @ORM\JoinColumn(nullable=false)
      */
     private $trick;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     * @Assert\Url(
+     *     protocols = {"http", "https"}
+     *     )
+     */
+    private $link;
 
     public function getId(): ?int
     {
@@ -86,6 +99,18 @@ class Media
     public function setTrick(?Trick $trick): self
     {
         $this->trick = $trick;
+
+        return $this;
+    }
+
+    public function getLink(): ?string
+    {
+        return $this->link;
+    }
+
+    public function setLink(?string $link): self
+    {
+        $this->link = $link;
 
         return $this;
     }

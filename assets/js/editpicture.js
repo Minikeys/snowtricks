@@ -14,6 +14,12 @@ $('#modal-edit-media').on('shown.bs.modal', function (event) {
     });
 });
 
+$('#modal-edit-media').on('hidden.bs.modal', function () {
+    var modal = $(this);
+    modal.find('.modal-content').html('');
+});
+
+
 $(document).on('change', '.custom-file-input', function(event) {
     var inputFile = event.currentTarget;
     $(inputFile).parent()
@@ -82,6 +88,84 @@ $(document).on('submit', "form[name='delete_main_picture']", function (e) {
                 $("#trick").css("background-image", "url(/img/background_home.jpg)");
                 $(modal).modal('hide');
                 $("#btndeletepicture").hide()
+            }else{
+                for(error in json.error){
+                    $("#error").append('<div class="alert alert-warning alert-dismissible fade show" role="alert">'+
+                        json.error[error] +
+                        '  <button type="button" class="close" data-dismiss="alert" aria-label="Close">'+
+                        '    <span aria-hidden="true">×</span>'+
+                        '  </button>'+
+                        '</div>');
+                }
+                $submitButton.html('Enregistrer');
+                $submitButton.prop('disabled', false);
+
+            }
+        },
+        error: function(jqXHR, status, error) {
+            console.log(error);
+        }
+    });
+});
+
+$(document).on('submit', "form[name='delete_media']", function (e) {
+
+    e.preventDefault();
+
+    $form = $(e.target);
+    var modal = $('#modal-edit-media');
+
+    var $submitButton = $form.find(':submit');
+    $submitButton.html('<i class="fas fa-spinner fa-pulse"></i>');
+    $submitButton.prop('disabled', true);
+
+    $form.ajaxSubmit({
+        type: 'post',
+        success: function(data) {
+            console.log(data);
+            var json = $.parseJSON(data);
+            if(json.message == 'success'){
+                $(modal).modal('hide');
+                $('#media-'+json.id).remove();
+                $('.responsive').slick('refresh');
+            }else{
+                for(error in json.error){
+                    $("#error").append('<div class="alert alert-warning alert-dismissible fade show" role="alert">'+
+                        json.error[error] +
+                        '  <button type="button" class="close" data-dismiss="alert" aria-label="Close">'+
+                        '    <span aria-hidden="true">×</span>'+
+                        '  </button>'+
+                        '</div>');
+                }
+                $submitButton.html('Enregistrer');
+                $submitButton.prop('disabled', false);
+
+            }
+        },
+        error: function(jqXHR, status, error) {
+            console.log(error);
+        }
+    });
+});
+
+$(document).on('submit', "form[name='add_media']", function (e) {
+
+    e.preventDefault();
+
+    $form = $(e.target);
+    var modal = $('#modal-edit-media');
+
+    var $submitButton = $form.find(':submit');
+    $submitButton.html('<i class="fas fa-spinner fa-pulse"></i>');
+    $submitButton.prop('disabled', true);
+
+    $form.ajaxSubmit({
+        type: 'post',
+        success: function(data) {
+            console.log(data);
+            var json = $.parseJSON(data);
+            if(json.message == 'success'){
+                console.log(data);
             }else{
                 for(error in json.error){
                     $("#error").append('<div class="alert alert-warning alert-dismissible fade show" role="alert">'+

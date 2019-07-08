@@ -5,8 +5,9 @@ $(document).ready(function(){
 
     $('.responsive').slick({
         dots: true,
-        infinite: false,
+        infinite: true,
         speed: 300,
+        cssEase: 'linear',
         slidesToShow: 6,
         slidesToScroll: 6,
         responsive: [

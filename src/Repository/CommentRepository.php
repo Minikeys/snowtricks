@@ -23,7 +23,7 @@ class CommentRepository extends ServiceEntityRepository
     public function findFirstComments($id)
     {
         return $this->findVisibleQuery()
-            ->orderBy('c.id', 'ASC')
+            ->orderBy('c.id', 'DESC')
             ->where('c.trick = :val')
             ->setParameter('val', $id)
             ->setMaxResults(5)
@@ -37,7 +37,7 @@ class CommentRepository extends ServiceEntityRepository
     public function findComments($offset, $id)
     {
         return $this->findVisibleQuery()
-            ->orderBy('c.id', 'ASC')
+            ->orderBy('c.id', 'DESC')
             ->where('c.trick = :val')
             ->setParameter('val', $id)
             ->setMaxResults(5)

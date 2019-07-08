@@ -74,14 +74,19 @@
                 </div>
             </div>
         </section>
-        <section id="comment">
-            <hr>
+        <section id="comment" style="padding-top: 10px; padding-bottom: 10px">
             {% if is_granted('ROLE_USER') %}
-                <p>FORM</p>
+                {{ form_start(formcomment) }}
+            <div class="row justify-content-center">
+                <div class="col-md-4">{{ form_row(formcomment.content) }}</div>
+                <div class="col-md-2">{{ form_row(formcomment.save, { 'label': 'Ajouter un commentaire' }) }}</div>
+                {{ form_row(formcomment.trick) }}
+            </div>
+                {{ form_end(formcomment) }}
             {% else %}
                 <p class="text-center">Vous devez être connecté pour laisser un commentaire.</p>
             {% endif %}
-            <hr>
+
             {% if comments is empty %}
                 <p class="text-center">Aucun commentaire.</p>
             {% else %}
@@ -109,4 +114,5 @@
 {% block javascripts %}
     {{ encore_entry_script_tags('js/slide') }}
     {{ encore_entry_script_tags('js/showmore') }}
+    {{ encore_entry_script_tags('js/addcomment') }}
 {% endblock %}
