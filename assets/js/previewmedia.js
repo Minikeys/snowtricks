@@ -17,10 +17,10 @@ $('#modal-preview-media').on('shown.bs.modal', function (event) {
             '     width="100%">');
     }else if(type == 'youtube'){
         modal.find('.modal-title').html('Preview Media ' + id);
-        modal.find('.modal-body').html('<iframe width="100%" src="https://www.youtube.com/embed/'+ link +'" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>');
+        modal.find('.modal-body').html('<iframe width="100%" height="100%" src="https://www.youtube.com/embed/'+ link +'" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>');
     }else if(type == 'dailymotion'){
         modal.find('.modal-title').html('Preview Media ' + id);
-        modal.find('.modal-body').html('<iframe frameborder="0" width="100%" src="//www.dailymotion.com/embed/video/'+ link +'?autoplay=0&mute=0" allowfullscreen allow="autoplay"></iframe>');
+        modal.find('.modal-body').html('<iframe frameborder="0" width="100%" height="100%" src="//www.dailymotion.com/embed/video/'+ link +'?autoplay=0&mute=0" allowfullscreen allow="autoplay"></iframe>');
     }
 
 });
