@@ -30,7 +30,7 @@ $(document).ready(function(){
 
             offset = offset + 5;
 
-            if (offset > totalitem){
+            if (offset >= totalitem){
                 $('#end').remove();
             }else {
                 $('#load').remove();
