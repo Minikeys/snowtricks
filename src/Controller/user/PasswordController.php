@@ -49,7 +49,7 @@ class PasswordController extends AbstractController
             $url = $this->generateUrl('reset.password', array('token' => $token), UrlGeneratorInterface::ABSOLUTE_URL);
 
             $message = (new \Swift_Message('Oublie de mot de passe - Réinisialisation'))
-                ->setFrom(array('noreply@snowtricks.com' => 'SnowTricks'))
+                ->setFrom(array('snowtricks@cybercreative.fr' => 'SnowTricks'))
                 ->setTo($user->getEmail())
                 ->setBody(
                     $this->renderView(
