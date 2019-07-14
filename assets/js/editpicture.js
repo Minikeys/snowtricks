@@ -120,7 +120,7 @@ $(document).on('submit', "form[name='delete_media']", function (e) {
             if(json.message == 'success'){
                 $(modal).modal('hide');
                 $('#media-'+json.id).remove();
-                $('.responsive').slick('refresh');
+                $('.carousel').slick('refresh');
             }else{
                 for(error in json.error){
                     $("#error").append('<div class="alert alert-warning alert-dismissible fade show" role="alert">'+

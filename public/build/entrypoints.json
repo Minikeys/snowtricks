@@ -5,7 +5,7 @@
         "/build/runtime.e59078a6.js",
         "/build/0.8c68423a.js",
         "/build/1.b287d5bd.js",
-        "/build/js/app.fc6f1dc3.js"
+        "/build/js/app.47a5060a.js"
       ]
     },
     "js/slide": {
@@ -13,7 +13,7 @@
         "/build/runtime.e59078a6.js",
         "/build/0.8c68423a.js",
         "/build/4.46c83cf7.js",
-        "/build/js/slide.2f2af1a3.js"
+        "/build/js/slide.8531accc.js"
       ]
     },
     "js/showmore": {
@@ -29,7 +29,7 @@
         "/build/runtime.e59078a6.js",
         "/build/0.8c68423a.js",
         "/build/1.b287d5bd.js",
-        "/build/js/editpicture.5515d737.js"
+        "/build/js/editpicture.dcd60914.js"
       ]
     },
     "js/addcomment": {
@@ -45,7 +45,7 @@
         "/build/runtime.e59078a6.js",
         "/build/0.8c68423a.js",
         "/build/1.b287d5bd.js",
-        "/build/js/previewmedia.408bfd02.js"
+        "/build/js/previewmedia.812eb860.js"
       ]
     },
     "js/tinymce": {
@@ -65,7 +65,7 @@
       ],
       "css": [
         "/build/3.36a8a52d.css",
-        "/build/css/app.e37e92e7.css"
+        "/build/css/app.797e793e.css"
       ]
     }
   }

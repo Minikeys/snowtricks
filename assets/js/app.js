@@ -20,7 +20,7 @@ $(document).on('change', '.custom-file-input', function(event) {
 $(document).on("click", "#showmedia", function() {
     $("#media").show();
     $("#showmedia").hide();
-    $('.responsive').slick('refresh');
+    $('.carousel').slick('refresh');
 });
 
 

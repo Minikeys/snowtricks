@@ -1,3 +1,4 @@
+/* Bootstrap custom */
 $primary: darken(#428bca, 20%);
 
 $grid-columns: 15 !default;
@@ -19,6 +20,52 @@ html, body {
 section {
     padding: 10px 0 10px;
 }
+/* Bootstrap custom end */
+
+/* Slick slide custom */
+
+.slick-slide {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.carousel-wrapper {
+    position: relative;
+}
+
+.carousel-wrapper a {
+    position: relative;
+    display: inline-block;
+}
+
+.slick-slide {
+    text-align: center !important;
+}
+
+.overlay {
+    position: absolute;
+    height: 100%;
+    width:100%;
+    top: 0;
+    left: 0;
+    background: rgba(1, 1, 1, .35);
+    transition: 0.2s;
+    opacity: 0;
+}
+
+.carousel-wrapper a:hover .overlay {
+    z-index: 99999;
+    opacity: 1;
+}
+
+.overlay-content {
+    color: rgb(255, 255, 255);
+    position: absolute;
+    top: 25%;
+    left: 35%;
+}
+
+/* Slick slide custom end */
 
 #top {
     padding-top: 0 !important;
@@ -95,11 +142,6 @@ section {
     cursor: pointer;
 }
 
-.slick-slide{
-    padding-left: 5px;
-    padding-right: 5px;
-}
-
 .gravatar {
     border-radius: 50%;
     -moz-border-radius: 50%;
@@ -116,7 +158,6 @@ section {
         display: none;
     }
     #showmedia {
-
     }
 }
 
@@ -125,6 +166,7 @@ section {
         display: none;
     }
 }
+
 
 
 

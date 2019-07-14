@@ -9,51 +9,83 @@
 {% block body %}
 <main role="main">
     <div class="container-trick">
-            <div class="row-justify">
-                {% if trick.picture is null %}
-                    <div class="col" id="trick" style="background-image: url({{ asset('img/background_home.jpg') }})">
-                {% else %}
-                    <div class="col" id="trick" style="background-image: url({{ asset(dir_media) ~ trick.picture }})">
-                {% endif %}
-                    <div class="landing-text">
-                        <h1 class="display-3">{{ trick.name }}</h1>
+        <div class="row-justify">
+            {% if trick.picture is null %}
+                <div class="col" id="trick" style="background-image: url({{ asset('img/background_home.jpg') }})">
+            {% else %}
+                <div class="col" id="trick" style="background-image: url({{ asset(dir_media) ~ trick.picture }})">
+            {% endif %}
+                <div class="landing-text">
+                    <h1 class="display-3">{{ trick.name }}</h1>
+                </div>
+                <div id="tools">
+                    <div class="btn-group" role="group">
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-edit-media" data-path="{{ path('admin.trick.edit.picture', {id: trick.id}) }}">
+                            <i class="fas fa-edit"></i>
+                        </button>
+                        <button id="btndeletepicture" type="button" class="btn btn-danger"  {% if trick.picture is null %}style="display: none"{% endif %} data-toggle="modal" data-target="#modal-edit-media" data-path="{{ path('admin.trick.delete.picture', {id: trick.id}) }}">
+                            <i class="fas fa-trash-alt"></i>
+                        </button>
                     </div>
-                        <div id="tools">
-                            <div class="btn-group" role="group">
-                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-edit-media" data-path="{{ path('admin.trick.edit.picture', {id: trick.id}) }}">
-                                    <i class="fas fa-edit"></i>
-                                </button>
-                                <button id="btndeletepicture" type="button" class="btn btn-danger"  {% if trick.picture is null %}style="display: none"{% endif %} data-toggle="modal" data-target="#modal-edit-media" data-path="{{ path('admin.trick.delete.picture', {id: trick.id}) }}">
-                                    <i class="fas fa-trash-alt"></i>
-                                </button>
-                            </div>
-                        </div>
+                </div>
             </div>
-        <section id="media">
-            <div class="row-fluid">
+        <section id="showmedia">
+            <div class="row">
+                <div class="col text-center">
+                    <button type="button" id="showmedia" class="btn btn-primary">Voir les médias</button>
+                </div>
+            </div>
+        </section>
+        <section id="media" class="carousel-wrapper">
+            <div class="container">
                 <div class="row">
-                    <div class="col">
-                        <div id="media-slide" class="responsive">
-                            <div align="center">
-                                <img src="{{ asset('img/addmedia.jpg')}}" class="card-img-top" alt="test" data-toggle="modal" data-target="#modal-edit-media" data-path="{{ path('admin.trick.add.media', {id: trick.id}) }}">
-                            </div>
-                            {% for media in trick.media %}
-                                {% if media.type == 'picture' %}
-                                    <div id="media-{{ media.id }}">
-                                        <img src="{{ asset(dir_media) ~ media.file }}" class="card-img-top" alt="test" data-toggle="modal" data-target="#modal-edit-media" data-path="{{ path('admin.trick.delete.media', {id: media.id}) }}">
+                    <ul class="col carousel text-center">
+                        <li>
+                            <img src="{{ asset('img/addmedia.jpg')}}" class="card-img-top" alt="test" data-toggle="modal" data-target="#modal-edit-media" data-path="{{ path('admin.trick.add.media', {id: trick.id}) }}">
+                        </li>
+                        {% for media in trick.media %}
+                            {% if media.type == 'picture' %}
+                                <li id="media-{{ media.id }}" class="media-slide">
+                                    <a href="#">
+                                    <img src="{{ asset(dir_media) ~ media.file }}" class="card-img-top" alt="test">
+                                    <div class="overlay">
+                                        <div class="overlay-content">
+                                            <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#modal-edit-media" data-path="{{ path('admin.trick.delete.media', {id: media.id}) }}">
+                                                <i class="fas fa-trash-alt"></i>
+                                            </button>
+                                        </div>
                                     </div>
-                                {% elseif media.type == 'youtube' %}
-                                    <div id="media-{{ media.id }}">
-                                        <img src="https://img.youtube.com/vi/{{ media.link }}/maxresdefault.jpg" class="card-img-top" alt="test" data-toggle="modal" data-target="#modal-edit-media" data-path="{{ path('admin.trick.delete.media', {id: media.id}) }}">
-                                    </div>
-                                {% elseif media.type == 'dailymotion' %}
-                                    <div id="media-{{ media.id }}">
-                                        <img src="https://www.dailymotion.com/thumbnail/video/{{ media.link }}" class="card-img-top" alt="test" data-toggle="modal" data-target="#modal-edit-media" data-path="{{ path('admin.trick.delete.media', {id: media.id}) }}">
-                                    </div>
-                                {% endif %}
-                            {% endfor %}
-                        </div>
-                    </div>
+                                    </a>
+                                </li>
+                            {% elseif media.type == 'youtube' %}
+                                <li id="media-{{ media.id }}">
+                                    <a href="#">
+                                        <img src="https://img.youtube.com/vi/{{ media.link }}/maxresdefault.jpg" class="card-img-top" alt="test">
+                                        <div class="overlay">
+                                            <div class="overlay-content">
+                                                <button type="button" class="btn btn-danger"  data-toggle="modal" data-target="#modal-edit-media" data-path="{{ path('admin.trick.delete.media', {id: media.id}) }}">
+                                                    <i class="fas fa-trash-alt"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                            {% elseif media.type == 'dailymotion' %}
+                                <li id="media-{{ media.id }}">
+                                    <a href="#">
+                                        <img src="https://www.dailymotion.com/thumbnail/video/{{ media.link }}" class="card-img-top" alt="test">
+                                        <div class="overlay">
+                                            <div class="overlay-content">
+                                                <button type="button" class="btn btn-danger"  data-toggle="modal" data-target="#modal-edit-media" data-path="{{ path('admin.trick.delete.media', {id: media.id}) }}">
+                                                    <i class="fas fa-trash-alt"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                            {% endif %}
+                        {% endfor %}
+                    </ul>
                 </div>
             </div>
         </section>

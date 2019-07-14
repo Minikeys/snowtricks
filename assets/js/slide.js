@@ -3,11 +3,12 @@ require('slick-carousel');
 
 $(document).ready(function(){
 
-    $('.responsive').slick({
+    $('.carousel').slick({
         dots: true,
         infinite: true,
         speed: 300,
         cssEase: 'linear',
+        adaptiveHeight: true,
         slidesToShow: 6,
         slidesToScroll: 6,
         responsive: [
