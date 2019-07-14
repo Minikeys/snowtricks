@@ -130,8 +130,8 @@ class AdminTrickController extends AbstractController
 
         if($this->isCsrfTokenValid('delete' . $trick->getId(), $request->get('_token'))){
 
-            //$this->em->remove($trick);
-            //$this->em->flush();
+            $this->em->remove($trick);
+            $this->em->flush();
             $this->addFlash('success', 'Trick delete success');
 
         }else{

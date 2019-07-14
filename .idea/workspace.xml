@@ -2,46 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c6004f33-565c-48a8-852a-4aa1a1761c00" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/public/build/0.8c68423a.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/build/1.b287d5bd.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/build/2.34f67967.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/build/2.9107429e.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/build/3.36a8a52d.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/build/3.74879aff.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/build/4.46c83cf7.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/build/css/app.e37e92e7.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/build/entrypoints.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/build/entrypoints.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/build/fonts/fa-brands-400.03783c51.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/build/fonts/fa-brands-400.7559b377.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/build/fonts/fa-brands-400.ed2b8bf1.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/build/fonts/fa-brands-400.fe9d62e0.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/build/fonts/fa-regular-400.59215032.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/build/fonts/fa-regular-400.e07d9e40.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/build/fonts/fa-regular-400.e5770f98.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/build/fonts/fa-regular-400.fc9c63c8.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/build/fonts/fa-solid-900.4bced7c4.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/build/fonts/fa-solid-900.acf50f59.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/build/fonts/fa-solid-900.b5cf8ae2.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/build/fonts/fa-solid-900.ef3df984.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/build/fonts/slick.b7c9e1e4.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/build/fonts/slick.ced611da.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/build/fonts/slick.d41f55a7.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/build/images/ajax-loader.c5cd7f53.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/build/images/fa-brands-400.073c2f3c.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/build/images/fa-regular-400.8fdea4e8.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/build/images/fa-solid-900.b557f56e.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/build/images/slick.f97e3bbf.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/build/js/addcomment.0906ad7c.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/build/js/app.fc6f1dc3.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/build/js/editpicture.5515d737.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/build/js/previewmedia.408bfd02.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/build/js/showmore.afbab566.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/build/js/slide.2f2af1a3.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/build/js/tinymce.568dffc1.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/build/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/build/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/build/runtime.e59078a6.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/admin/AdminTrickController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/admin/AdminTrickController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Trick.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Trick.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -60,8 +21,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Controller/admin/AdminTrickController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="278">
-              <caret line="69" column="39" selection-start-line="69" selection-start-column="39" selection-end-line="69" selection-end-column="39" />
+            <state relative-caret-position="41">
+              <caret line="133" column="12" selection-start-line="133" selection-start-column="12" selection-end-line="133" selection-end-column="12" />
               <folding>
                 <element signature="e#42#63#0#PHP" expanded="true" />
               </folding>
@@ -70,18 +31,31 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Entity/Trick.php">
+        <entry file="file://$PROJECT_DIR$/src/Controller/admin/AdminPictureController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="226">
-              <caret line="60" column="7" selection-start-line="60" selection-start-column="7" selection-end-line="60" selection-end-column="7" />
+            <state relative-caret-position="2289">
+              <caret line="109" column="74" selection-start-line="109" selection-start-column="68" selection-end-line="109" selection-end-column="74" />
               <folding>
-                <element signature="e#30#78#0#PHP" expanded="true" />
+                <element signature="e#42#63#0#PHP" expanded="true" />
+                <element signature="e#1301#1327#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Controller/admin/AdminMediaController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="286">
+              <caret line="138" column="47" selection-start-line="138" selection-start-column="47" selection-end-line="138" selection-end-column="47" />
+              <folding>
+                <element signature="e#42#63#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.env">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="21">
@@ -124,6 +98,7 @@
       <find>yarn add bootstrap --dev</find>
       <find>jquery</find>
       <find>youtube</find>
+      <find>delete</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -180,9 +155,9 @@
         <option value="$PROJECT_DIR$/assets/js/app.js" />
         <option value="$PROJECT_DIR$/templates/pages/show.html.twig" />
         <option value="$PROJECT_DIR$/assets/js/previewmedia.js" />
-        <option value="$PROJECT_DIR$/src/Controller/admin/AdminTrickController.php" />
         <option value="$PROJECT_DIR$/src/Entity/Trick.php" />
         <option value="$PROJECT_DIR$/.env" />
+        <option value="$PROJECT_DIR$/src/Controller/admin/AdminTrickController.php" />
       </list>
     </option>
   </component>
@@ -423,18 +398,18 @@
       <workItem from="1563047630745" duration="110000" />
       <workItem from="1563047777235" duration="333000" />
       <workItem from="1563048200970" duration="906000" />
-      <workItem from="1563104959659" duration="10320000" />
+      <workItem from="1563104959659" duration="10479000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="151834000" />
+    <option name="totallyTimeSpent" value="151993000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="877" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49911505" visible="true" weight="0.22246066" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49911505" visible="true" weight="0.22246066" />
       <window_info id="Structure" order="1" sideWeight="0.50088495" side_tool="true" weight="0.19241774" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -447,7 +422,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.3295129" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.49928468" visible="true" weight="0.2884097" />
+      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49928468" visible="true" weight="0.2884097" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5007153" side_tool="true" weight="0.2884097" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -502,19 +477,6 @@
           <caret line="15" column="101" selection-start-line="15" selection-start-column="101" selection-end-line="15" selection-end-column="101" />
           <folding>
             <element signature="e#28#49#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/admin/AdminPictureController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1176">
-          <caret line="56" column="54" selection-start-line="56" selection-start-column="54" selection-end-line="56" selection-end-column="54" />
-          <folding>
-            <element signature="e#42#63#0#PHP" expanded="true" />
-            <element signature="e#1301#1327#0#PHP" expanded="true" />
-            <element signature="e#3116#3146#0#PHP" expanded="true" />
-            <element signature="e#4004#4034#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -623,16 +585,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
           <caret line="17" column="38" selection-start-line="17" selection-start-column="38" selection-end-line="17" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/admin/AdminMediaController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="426">
-          <caret line="138" column="47" selection-start-line="138" selection-start-column="47" selection-end-line="138" selection-end-column="47" />
-          <folding>
-            <element signature="e#42#63#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -841,13 +793,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/admin/AdminTrickController.php">
+    <entry file="file://$PROJECT_DIR$/.env">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="278">
-          <caret line="69" column="39" selection-start-line="69" selection-start-column="39" selection-end-line="69" selection-end-column="39" />
-          <folding>
-            <element signature="e#42#63#0#PHP" expanded="true" />
-          </folding>
+        <state relative-caret-position="21">
+          <caret line="16" column="12" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="12" />
         </state>
       </provider>
     </entry>
@@ -861,10 +810,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.env">
+    <entry file="file://$PROJECT_DIR$/src/Controller/admin/AdminTrickController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="16" column="12" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="12" />
+        <state relative-caret-position="41">
+          <caret line="133" column="12" selection-start-line="133" selection-start-column="12" selection-end-line="133" selection-end-column="12" />
+          <folding>
+            <element signature="e#42#63#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/admin/AdminPictureController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2289">
+          <caret line="109" column="74" selection-start-line="109" selection-start-column="68" selection-end-line="109" selection-end-column="74" />
+          <folding>
+            <element signature="e#42#63#0#PHP" expanded="true" />
+            <element signature="e#1301#1327#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/admin/AdminMediaController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="138" column="47" selection-start-line="138" selection-start-column="47" selection-end-line="138" selection-end-column="47" />
+          <folding>
+            <element signature="e#42#63#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
