@@ -1,0 +1,14 @@
+<h3>Activer votre compte</h3>
+
+Bienvenue {{ user.name }}!<br>
+
+{# example, assuming you have a route named "login" #}
+Vous pouvez activer votre compte : <a href="{{ url }}">Cliquer ici</a>.<br>
+<br>
+
+
+A bientôt,<br>
+L'équipe SnowTricks.<br>
+
+{# Makes an absolute URL to the /images/logo.png file #}
+<img src="{{ absolute_url(asset('img/logo.png')) }}">

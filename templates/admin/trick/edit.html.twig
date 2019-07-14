@@ -46,42 +46,42 @@
                         {% for media in trick.media %}
                             {% if media.type == 'picture' %}
                                 <li id="media-{{ media.id }}" class="media-slide">
-                                    <a href="#">
-                                    <img src="{{ asset(dir_media) ~ media.file }}" class="card-img-top" alt="test">
-                                    <div class="overlay">
-                                        <div class="overlay-content">
-                                            <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#modal-edit-media" data-path="{{ path('admin.trick.delete.media', {id: media.id}) }}">
-                                                <i class="fas fa-trash-alt"></i>
-                                            </button>
+                                    <div class="media-content">
+                                        <img src="{{ asset(dir_media) ~ media.file }}" alt="picture" class="image" style="width:100%">
+                                        <div class="middle">
+                                            <div class="text">
+                                                <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#modal-edit-media" data-path="{{ path('admin.trick.delete.media', {id: media.id}) }}">
+                                                    <i class="fas fa-trash-alt"></i>
+                                                </button>
+                                            </div>
                                         </div>
                                     </div>
-                                    </a>
                                 </li>
                             {% elseif media.type == 'youtube' %}
                                 <li id="media-{{ media.id }}">
-                                    <a href="#">
-                                        <img src="https://img.youtube.com/vi/{{ media.link }}/mqdefault.jpg" class="card-img-top" alt="test">
-                                        <div class="overlay">
-                                            <div class="overlay-content">
-                                                <button type="button" class="btn btn-danger"  data-toggle="modal" data-target="#modal-edit-media" data-path="{{ path('admin.trick.delete.media', {id: media.id}) }}">
+                                    <div class="media-content">
+                                        <img src="https://img.youtube.com/vi/{{ media.link }}/mqdefault.jpg" alt="youtube" class="image" style="width:100%">
+                                        <div class="middle">
+                                            <div class="text">
+                                                <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#modal-edit-media" data-path="{{ path('admin.trick.delete.media', {id: media.id}) }}">
                                                     <i class="fas fa-trash-alt"></i>
                                                 </button>
                                             </div>
                                         </div>
-                                    </a>
+                                    </div>
                                 </li>
                             {% elseif media.type == 'dailymotion' %}
                                 <li id="media-{{ media.id }}">
-                                    <a href="#">
-                                        <img src="https://www.dailymotion.com/thumbnail/video/{{ media.link }}" class="card-img-top" alt="test">
-                                        <div class="overlay">
-                                            <div class="overlay-content">
-                                                <button type="button" class="btn btn-danger"  data-toggle="modal" data-target="#modal-edit-media" data-path="{{ path('admin.trick.delete.media', {id: media.id}) }}">
+                                    <div class="media-content">
+                                        <img src="https://www.dailymotion.com/thumbnail/video/{{ media.link }}" alt="youtube" class="image" style="width:100%">
+                                        <div class="middle">
+                                            <div class="text">
+                                                <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#modal-edit-media" data-path="{{ path('admin.trick.delete.media', {id: media.id}) }}">
                                                     <i class="fas fa-trash-alt"></i>
                                                 </button>
                                             </div>
                                         </div>
-                                    </a>
+                                    </div>
                                 </li>
                             {% endif %}
                         {% endfor %}

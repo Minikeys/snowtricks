@@ -29,40 +29,42 @@ section {
     padding-right: 5px;
 }
 
-.carousel-wrapper {
+.media-content {
     position: relative;
 }
 
-.carousel-wrapper a {
-    position: relative;
-    display: inline-block;
+.image {
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
 }
 
-.slick-slide {
-    text-align: center !important;
-}
-
-.overlay {
-    position: absolute;
-    height: 100%;
-    width:100%;
-    top: 0;
-    left: 0;
-    background: rgba(1, 1, 1, .35);
-    transition: 0.2s;
+.middle {
+    transition: .5s ease;
     opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
 }
 
-.carousel-wrapper a:hover .overlay {
-    z-index: 99999;
+.media-content:hover .image {
+    opacity: 0.3;
+}
+
+.media-content:hover .middle {
     opacity: 1;
 }
 
-.overlay-content {
-    color: rgb(255, 255, 255);
-    position: absolute;
-    top: 25%;
-    left: 35%;
+.text {
+    color: white;
+    font-size: 16px;
+    padding: 16px 32px;
 }
 
 /* Slick slide custom end */

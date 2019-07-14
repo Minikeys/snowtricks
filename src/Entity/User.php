@@ -62,6 +62,21 @@ class User implements UserInterface
      */
     private $gravatar;
 
+    /**
+     * @ORM\Column(type="boolean")
+     */
+    private $status;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $activate_token;
+
+    /**
+     * @ORM\Column(type="datetime", nullable=true)
+     */
+    private $date_activate;
+
     public function __construct()
     {
         $this->tricks = new ArrayCollection();
@@ -240,6 +255,42 @@ class User implements UserInterface
     public function setGravatar(string $gravatar): self
     {
         $this->gravatar = $gravatar;
+
+        return $this;
+    }
+
+    public function getStatus(): ?bool
+    {
+        return $this->status;
+    }
+
+    public function setStatus(bool $status): self
+    {
+        $this->status = $status;
+
+        return $this;
+    }
+
+    public function getActivateToken(): ?string
+    {
+        return $this->activate_token;
+    }
+
+    public function setActivateToken(?string $activate_token): self
+    {
+        $this->activate_token = $activate_token;
+
+        return $this;
+    }
+
+    public function getDateActivate(): ?\DateTimeInterface
+    {
+        return $this->date_activate;
+    }
+
+    public function setDateActivate(?\DateTimeInterface $date_activate): self
+    {
+        $this->date_activate = $date_activate;
 
         return $this;
     }

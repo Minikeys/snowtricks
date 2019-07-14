@@ -28,10 +28,29 @@ class UserRepository extends ServiceEntityRepository
             ->getOneOrNullResult();
     }
 
+    public function findOneByActivate($email)
+    {
+        return $this->createQueryBuilder('u')
+            ->select('u.status')
+            ->andWhere('u.email = :val')
+            ->setParameter('val', $email)
+            ->getQuery()
+            ->getOneOrNullResult();
+    }
+
     public function findOneByResetToken($token): ?User
     {
         return $this->createQueryBuilder('u')
             ->andWhere('u.ResetToken = :val')
+            ->setParameter('val', $token)
+            ->getQuery()
+            ->getOneOrNullResult();
+    }
+
+    public function findOneByActivateToken($token): ?User
+    {
+        return $this->createQueryBuilder('u')
+            ->andWhere('u.activate_token = :val')
             ->setParameter('val', $token)
             ->getQuery()
             ->getOneOrNullResult();
