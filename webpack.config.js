@@ -29,6 +29,7 @@ Encore
     .addEntry('js/editpicture', './assets/js/editpicture.js')
     .addEntry('js/addcomment', './assets/js/addcomment.js')
     .addEntry('js/previewmedia', './assets/js/previewmedia.js')
+    .addEntry('js/tinymce', './assets/js/tinymce.js')
     .addStyleEntry('css/app', './assets/css/app.scss')
     //.addEntry('page1', './assets/js/page1.js')
     //.addEntry('page2', './assets/js/page2.js')

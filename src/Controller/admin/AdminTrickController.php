@@ -94,11 +94,19 @@ class AdminTrickController extends AbstractController
         $form->handleRequest($request);
 
         if($form->isSubmitted() && $form->isValid()){
-            $this->em->persist($trick);
-            $trick->setUpdateAt(new DateTime());
-            $this->em->flush();
-            $this->addFlash('success', 'Trick edité avec succès');
-            return $this->redirectToRoute('trick.show', array('slug' => $trick->getId(), 'id' => $trick->getId()));
+            $name = $form['name']->getData();
+            $check_duplicate = $this->repository->findTricks($name);
+
+            if(is_null($check_duplicate)){
+                $this->em->persist($trick);
+                $trick->setUpdateAt(new DateTime());
+                $this->em->flush();
+                $this->addFlash('success', 'Trick edité avec succès');
+                return $this->redirectToRoute('trick.show', array('slug' => $trick->getId(), 'id' => $trick->getId()));
+            }else{
+                $this->addFlash('error', 'Nom déjà utilisé');
+                return $this->redirectToRoute('admin.trick.edit', array('id' => $trick->getId()));
+            }
         }
 
         return $this->render('admin/trick/edit.html.twig', [

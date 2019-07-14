@@ -33,7 +33,7 @@ class PasswordController extends AbstractController
             $user = $entityManager->getRepository(User::class)->findOneByEmail($email);
 
             if ($user === null) {
-                $this->addFlash('danger', 'E-mail non reconnu.');
+                $this->addFlash('error', 'E-mail non reconnu.');
                 return $this->redirectToRoute('forgot.password');
             }
             $token = $tokenGenerator->generateToken();
@@ -42,7 +42,7 @@ class PasswordController extends AbstractController
                 $user->setResetToken($token);
                 $entityManager->flush();
             } catch (\Exception $e) {
-                $this->addFlash('warning', $e->getMessage());
+                $this->addFlash('error', $e->getMessage());
                 return $this->redirectToRoute('home');
             }
 
@@ -89,7 +89,7 @@ class PasswordController extends AbstractController
             /* @var $user User */
 
             if ($user === null) {
-                $this->addFlash('danger', 'Mot de passe non reconnu');
+                $this->addFlash('error', 'Mot de passe non reconnu');
                 return $this->redirectToRoute('home');
             }
 
@@ -101,6 +101,15 @@ class PasswordController extends AbstractController
 
             return $this->redirectToRoute('home');
         }else {
+            $entityManager = $this->getDoctrine()->getManager();
+
+            $user = $entityManager->getRepository(User::class)->findOneByResetToken($token);
+            /* @var $user User */
+
+            if ($user === null) {
+                $this->addFlash('error', 'Token invalide.');
+                return $this->redirectToRoute('home');
+            }
 
             return $this->render('security/resetpassword.html.twig', ['token' => $token]);
         }

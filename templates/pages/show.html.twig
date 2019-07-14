@@ -79,7 +79,7 @@
         <section id="details">
             <div class="row-fluid">
                 <div class="col">
-                    <p class="text-justify">{{ trick.description }}</p>
+                    <p class="text-justify">{{ trick.description | raw }}</p>
                 </div>
                 <div class="col">
                     <p style="text-align: center">Créer le {{ trick.createdat|date("m/d/Y") }} | Catégorie {{ trick.category.name }} | Mis à jour le {{ trick.updateat|date("m/d/Y") }}</p>

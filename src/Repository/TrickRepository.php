@@ -30,7 +30,7 @@ class TrickRepository extends ServiceEntityRepository
             ;
     }
 
-    public function findTricks($offset)
+    public function findOtherTricks($offset)
     {
         return $this->findVisibleQuery()
             ->orderBy('t.id', 'ASC')
@@ -39,6 +39,15 @@ class TrickRepository extends ServiceEntityRepository
             ->getQuery()
             ->getResult()
             ;
+    }
+
+    public function findTricks($name)
+    {
+        return $this->createQueryBuilder('t')
+            ->where('t.name = :val')
+            ->setParameter('val', $name)
+            ->getQuery()
+            ->getOneOrNullResult();
     }
 
     public function getTotalTricks()

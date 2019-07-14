@@ -5,15 +5,15 @@
         "/build/runtime.e59078a6.js",
         "/build/0.8c68423a.js",
         "/build/1.b287d5bd.js",
-        "/build/js/app.b6ef7a54.js"
+        "/build/js/app.b53989d8.js"
       ]
     },
     "js/slide": {
       "js": [
         "/build/runtime.e59078a6.js",
         "/build/0.8c68423a.js",
-        "/build/2.a90ce2ee.js",
-        "/build/js/slide.161b8158.js"
+        "/build/4.46c83cf7.js",
+        "/build/js/slide.2f2af1a3.js"
       ]
     },
     "js/showmore": {
@@ -48,12 +48,24 @@
         "/build/js/previewmedia.5859fca4.js"
       ]
     },
-    "css/app": {
+    "js/tinymce": {
       "js": [
-        "/build/runtime.e59078a6.js"
+        "/build/runtime.e59078a6.js",
+        "/build/2.34f67967.js",
+        "/build/js/tinymce.568dffc1.js"
       ],
       "css": [
-        "/build/css/app.427121d6.css"
+        "/build/2.9107429e.css"
+      ]
+    },
+    "css/app": {
+      "js": [
+        "/build/runtime.e59078a6.js",
+        "/build/3.74879aff.js"
+      ],
+      "css": [
+        "/build/3.36a8a52d.css",
+        "/build/css/app.03e04ba9.css"
       ]
     }
   }
