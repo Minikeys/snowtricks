@@ -44,6 +44,7 @@ class TrickRepository extends ServiceEntityRepository
     public function findTricks($name)
     {
         return $this->createQueryBuilder('t')
+            ->select('t.id')
             ->where('t.name = :val')
             ->setParameter('val', $name)
             ->getQuery()
