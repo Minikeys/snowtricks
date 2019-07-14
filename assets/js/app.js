@@ -10,8 +10,13 @@ const $ = require('jquery');
 require('bootstrap');
 require('slick-carousel');
 
-// Need jQuery? Install it with "yarn add jquery", then uncomment to require it.
-// const $ = require('jquery');
+$(document).on('change', '.custom-file-input', function(event) {
+    var inputFile = event.currentTarget;
+    $(inputFile).parent()
+        .find('.custom-file-label')
+        .html(inputFile.files[0].name);
+});
+
 $(document).ready(function(){
 
     $('#delete').click(function(){

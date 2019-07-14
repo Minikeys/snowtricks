@@ -20,14 +20,6 @@ $('#modal-edit-media').on('hidden.bs.modal', function () {
     modal.find('.modal-content').html('');
 });
 
-
-$(document).on('change', '.custom-file-input', function(event) {
-    var inputFile = event.currentTarget;
-    $(inputFile).parent()
-        .find('.custom-file-label')
-        .html(inputFile.files[0].name);
-});
-
 $(document).on('submit', "form[name='edit_picture_trick']", function (e) {
 
     e.preventDefault();
