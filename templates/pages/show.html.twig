@@ -8,30 +8,38 @@
 
 {% block body %}
 <main role="main">
-    <section id="media">
     <div class="container-trick">
-        <div class="row-justify">
-            {% if trick.picture is null %}
-                <div class="col" id="trick" style="background-image: url({{ asset('img/background_home.jpg') }})">
-            {% else %}
-                <div class="col" id="trick" style="background-image: url({{ asset(dir_media) ~ trick.picture }});">
-            {% endif %}
-                <div class="landing-text">
-                    <h1 class="display-3">{{ trick.name }}</h1>
-                </div>
-                {% if is_granted('ROLE_USER') %}
-                    <div id="tools">
-                        <div class="btn-group" role="group">
-                            <button type="button" class="btn btn-primary" onclick="window.location.href='{{ path('admin.trick.edit', {id: trick.id}) }}'"><i class="far fa-edit"></i></button>
-                            <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#modal-delete-trick" data-actionurl="{{ path('admin.trick.delete', {id: trick.id}) }}" data-token="{{ csrf_token('delete' ~ trick.id)}}">
-                                <i class="fas fa-trash-alt"></i>
-                            </button>
-                        </div>
-                    </div>
+        <section id="top">
+            <div class="row-justify">
+                {% if trick.picture is null %}
+                    <div class="col" id="trick" style="background-image: url({{ asset('img/background_home.jpg') }})">
+                {% else %}
+                    <div class="col" id="trick" style="background-image: url({{ asset(dir_media) ~ trick.picture }});">
                 {% endif %}
+                    <div class="landing-text">
+                        <h1 class="display-3">{{ trick.name }}</h1>
+                    </div>
+                    {% if is_granted('ROLE_USER') %}
+                        <div id="tools">
+                            <div class="btn-group" role="group">
+                                <button type="button" class="btn btn-primary" onclick="window.location.href='{{ path('admin.trick.edit', {id: trick.id}) }}'"><i class="far fa-edit"></i></button>
+                                <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#modal-delete-trick" data-actionurl="{{ path('admin.trick.delete', {id: trick.id}) }}" data-token="{{ csrf_token('delete' ~ trick.id)}}">
+                                    <i class="fas fa-trash-alt"></i>
+                                </button>
+                            </div>
+                        </div>
+                    {% endif %}
+                </div>
             </div>
-        </div>
+        </section>
         {% if trick.media is not empty %}
+        <section id="showmedia">
+            <div class="row">
+                <div class="col text-center">
+                    <button type="button" id="showmedia" class="btn btn-primary">Voir les médias</button>
+                </div>
+            </div>
+        </section>
         <section id="media">
             <div class="row-fluid">
                 <div class="row">
@@ -105,8 +113,12 @@
             <ul class="list-group w-50" style="margin: auto;" id="content">
                 {% for comment in comments %}
                     <li class="list-group-item">
-                        <p class="mb-1">{{ comment.content }}</p>
-                        <small>Auteur : {{ comment.author.name }}, ajouté le {{ comment.addedat|date("m/d/Y") }}</small>
+                        <div class="comment"><img class="gravatar" src="{{ comment.author.gravatar }}"></div>
+                        <div class="comment">
+                            <p class="mb-1">{{ comment.content }}</p>
+                            <small>Auteur : {{ comment.author.name }}, ajouté le {{ comment.addedat|date("m/d/Y") }}</small>
+                        </div>
+
                     </li>
                 {% endfor %}
             </ul>

@@ -57,6 +57,11 @@ class User implements UserInterface
      */
     private $ResetToken;
 
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $gravatar;
+
     public function __construct()
     {
         $this->tricks = new ArrayCollection();
@@ -223,6 +228,18 @@ class User implements UserInterface
     public function setResetToken(?string $ResetToken): self
     {
         $this->ResetToken = $ResetToken;
+
+        return $this;
+    }
+
+    public function getGravatar(): ?string
+    {
+        return $this->gravatar;
+    }
+
+    public function setGravatar(string $gravatar): self
+    {
+        $this->gravatar = $gravatar;
 
         return $this;
     }

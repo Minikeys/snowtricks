@@ -30,6 +30,7 @@ $("form[name='comment']").submit(function (e) {
                     .val('');
                 $submitButton.html('Ajouter un commentaire');
                 $submitButton.prop('disabled', false);
+                location.reload();
             }else{
                 $("#comment").prepend("<div class=\"alert alert-danger alert-dismissible fade show\" role=\"alert\">\n" +
                     "  Erreur, veuillez ressayé ultérieurement\n" +

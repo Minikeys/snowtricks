@@ -17,11 +17,14 @@ $(document).on('change', '.custom-file-input', function(event) {
         .html(inputFile.files[0].name);
 });
 
-$(document).ready(function(){
+$(document).on("click", "#showmedia", function() {
+    $("#media").show();
+    $("#showmedia").hide();
+    $('.responsive').slick('refresh');
+});
 
-    $('#delete').click(function(){
-        $('#18').remove();
-    });
+
+$(document).ready(function(){
 
     $('#scroll-top').click(function(){
         document.body.scrollTop = 0;

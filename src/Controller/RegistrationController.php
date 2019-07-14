@@ -22,6 +22,9 @@ class RegistrationController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+            $email = $form['email']->getData();
+            $gravatar = "http://www.gravatar.com/avatar/" . md5(strtolower(trim($email)));
+            $user->setGravatar($gravatar);
             // encode the plain password
             $user->setPassword(
                 $passwordEncoder->encodePassword(

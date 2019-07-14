@@ -9,6 +9,7 @@ use App\Form\EditTrickType;
 use App\Form\NewTrickType;
 use App\Repository\TrickRepository;
 use DateTime;
+use phpDocumentor\Reflection\Types\Null_;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Doctrine\Common\Persistence\ObjectManager;
 use Symfony\Component\HttpFoundation\File\Exception\FileException;
@@ -63,9 +64,11 @@ class AdminTrickController extends AbstractController
                     // ... handle exception if something happens during file upload
                 }
                 $trick->setPicture($newFilename);
+            }else{
+                $trick->setPicture(null);
             }
             $this->em->persist($trick);
-            $trick->setUpdateAt(new DateTime());
+            $trick->setUpdateAt(null);
             $trick->setCreatedAt(new DateTime());
             $trick->setPublished('1');
             $trick->setAuthor($this->getUser());
