@@ -92,11 +92,12 @@ class AdminTrickController extends AbstractController
 
         $form = $this->createForm(EditTrickType::class, $trick);
         $form->handleRequest($request);
+        $original_name = $trick->getName();
 
         if($form->isSubmitted() && $form->isValid()){
             $name = $form['name']->getData();
             $check_duplicate = $this->repository->findTricks($name);
-            $original_name = $trick->getName();
+
             if($name === $original_name || is_null($check_duplicate)){
                 $this->em->persist($trick);
                 $trick->setUpdateAt(new DateTime());
