@@ -96,8 +96,8 @@ class AdminTrickController extends AbstractController
         if($form->isSubmitted() && $form->isValid()){
             $name = $form['name']->getData();
             $check_duplicate = $this->repository->findTricks($name);
-
-            if(is_null($check_duplicate)){
+            $original_name = $trick->getName();
+            if($name === $original_name || is_null($check_duplicate)){
                 $this->em->persist($trick);
                 $trick->setUpdateAt(new DateTime());
                 $this->em->flush();
