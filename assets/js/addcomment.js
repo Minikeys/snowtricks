@@ -15,10 +15,8 @@ $("form[name='comment']").submit(function (e) {
     $form.ajaxSubmit({
         type: 'post',
         success: function(data) {
-            console.log(data);
             var json = $.parseJSON(data);
             if(json.message == 'success'){
-                console.log('ok');
                 $("#comment").prepend("<div class=\"alert alert-success alert-dismissible fade show\" role=\"alert\">\n" +
                     "  Commentaire ajouté\n" +
                     "  <button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\">\n" +
