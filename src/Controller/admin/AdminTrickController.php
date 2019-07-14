@@ -68,7 +68,6 @@ class AdminTrickController extends AbstractController
                 $trick->setPicture(null);
             }
             $this->em->persist($trick);
-            $trick->setUpdateAt(null);
             $trick->setCreatedAt(new DateTime());
             $trick->setPublished('1');
             $trick->setAuthor($this->getUser());
