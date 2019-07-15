@@ -15,7 +15,6 @@ Installation :
 <li>Go to the folder snowtricks.</li>
 <li>Use this command : "composer install"</li>
 <li>Configure database access and email in .env file.</li>
-<li>Use this command "php bin/console doctrine:database:create" for create database.</li>
-<li>Use this command "php bin/console doctrine:migrations:migrate".</li>
+<li>Import "snowtricks.sql" in your database.</li>
 <li>Ready to use! enjoy ;)</li>
 </ul>
