@@ -3,47 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="c6004f33-565c-48a8-852a-4aa1a1761c00" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/build/0.8c68423a.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/build/1.b287d5bd.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/build/2.34f67967.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/build/2.9107429e.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/build/3.36a8a52d.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/build/3.74879aff.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/build/4.46c83cf7.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/build/css/app.612c768d.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/build/entrypoints.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/build/entrypoints.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/build/fonts/fa-brands-400.03783c51.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/build/fonts/fa-brands-400.7559b377.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/build/fonts/fa-brands-400.ed2b8bf1.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/build/fonts/fa-brands-400.fe9d62e0.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/build/fonts/fa-regular-400.59215032.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/build/fonts/fa-regular-400.e07d9e40.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/build/fonts/fa-regular-400.e5770f98.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/build/fonts/fa-regular-400.fc9c63c8.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/build/fonts/fa-solid-900.4bced7c4.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/build/fonts/fa-solid-900.acf50f59.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/build/fonts/fa-solid-900.b5cf8ae2.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/build/fonts/fa-solid-900.ef3df984.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/build/fonts/slick.b7c9e1e4.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/build/fonts/slick.ced611da.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/build/fonts/slick.d41f55a7.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/build/images/ajax-loader.c5cd7f53.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/build/images/fa-brands-400.073c2f3c.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/build/images/fa-regular-400.8fdea4e8.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/build/images/fa-solid-900.b557f56e.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/build/images/slick.f97e3bbf.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/build/js/addcomment.aa5660de.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/build/js/app.47a5060a.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/build/js/editpicture.dcd60914.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/build/js/previewmedia.812eb860.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/build/js/showmore.afbab566.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/build/js/slide.8531accc.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/build/js/tinymce.568dffc1.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/build/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/build/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/build/runtime.e59078a6.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/TrickTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/TrickTest.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -59,6 +18,15 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.env">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="179">
+              <caret line="16" column="12" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tests/HomeTest.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -80,7 +48,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/base.html.twig">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="2666">
@@ -185,10 +153,10 @@
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/tests/AdminTrickTest.php" />
         <option value="$PROJECT_DIR$/tests/AbstractWebTestCase.php" />
-        <option value="$PROJECT_DIR$/.env" />
         <option value="$PROJECT_DIR$/tests/HomeTest.php" />
         <option value="$PROJECT_DIR$/tests/TrickTest.php" />
         <option value="$PROJECT_DIR$/templates/base.html.twig" />
+        <option value="$PROJECT_DIR$/.env" />
       </list>
     </option>
   </component>
@@ -422,12 +390,12 @@
       <workItem from="1563047777235" duration="333000" />
       <workItem from="1563048200970" duration="906000" />
       <workItem from="1563104959659" duration="18443000" />
-      <workItem from="1563133060138" duration="9356000" />
+      <workItem from="1563133060138" duration="9402000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="169313000" />
+    <option name="totallyTimeSpent" value="169359000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="877" extended-state="6" />
@@ -819,13 +787,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.env">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="16" column="11" selection-start-line="16" selection-start-column="11" selection-end-line="16" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Controller/HomeController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-20">
@@ -876,6 +837,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2666">
           <caret line="202" column="58" selection-start-line="202" selection-start-column="58" selection-end-line="202" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.env">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="179">
+          <caret line="16" column="12" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="12" />
         </state>
       </provider>
     </entry>
