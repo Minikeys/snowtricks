@@ -1,10 +1,7 @@
 <?php
 
-
 namespace App\Tests;
 
-use App\Controller\admin\AdminTrickController;
-use App\Entity\Media;
 use App\Entity\Trick;
 
 use PHPUnit\Framework\TestCase;
@@ -12,19 +9,18 @@ use PHPUnit\Framework\TestCase;
 class TrickTest extends TestCase
 {
 
-    public function testCreateTrick()
+    public function testNameTrick()
     {
-        $trick = new Media();
-        $trick->setFile('http://test.fr');
-        $this->assertEquals('http://test.fr', $trick->getFile());
+        $trick = new Trick();
+        $trick->setName('test');
+        $this->assertEquals('test', $trick->getName());
     }
 
-    public function testCreateTrick2()
+    public function testPictureTrick()
     {
-        $test = $this->getMockBuilder(AdminTrickController::class)
-            ->setMethods('delete')
-            ->getMock();
-        $test->expects($this->once())->method('get');
-
+        $trick = new Trick();
+        $trick->setPicture('test.jpg');
+        $this->assertEquals('test.jpg', $trick->getPicture());
     }
+
 }
